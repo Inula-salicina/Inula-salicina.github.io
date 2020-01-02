@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2019/12/30/hello-world/"/>
-    <url>/2019/12/30/hello-world/</url>
+    <title>Docker&amp;部署</title>
+    <link href="/2019/12/30/Docker-%E9%83%A8%E7%BD%B2/"/>
+    <url>/2019/12/30/Docker-%E9%83%A8%E7%BD%B2/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-engine---community" target="_blank" rel="noopener">官方文档</a></p><h3 id="centos"><a href="#centos" class="headerlink" title="centos"></a>centos</h3><ol><li>安装所需的软件包。yum-utils提供了yum-config-manager 效用，并device-mapper-persistent-data和lvm2由需要 devicemapper存储驱动程序。<pre><code>$ sudo yum install -y yum-utils \device-mapper-persistent-data \lvm2</code></pre></li><li>使用以下命令来设置稳定的存储库</li></ol><pre><code>$ sudo yum-config-manager \    --add-repo \    https://download.docker.com/linux/centos/docker-ce.repo</code></pre><ol start="3"><li>安装最新版本的Docker Engine-Community和containerd，或者转到下一步安装特定版本</li></ol><pre><code>$ sudo yum install docker-ce docker-ce-cli containerd.io</code></pre><ol start="4"><li>启动docker</li></ol><pre><code>$ sudo systemctl start docker</code></pre><ol start="5"><li>通过运行hello-world 映像来验证是否正确安装了Docker Engine-Community 。</li></ol><pre><code>$ sudo docker run hello-world</code></pre>]]></content>
     
     
     <categories>
@@ -29,11 +29,11 @@
   
   
   <entry>
-    <title>Docker&amp;部署</title>
-    <link href="/2019/12/30/Docker-%E9%83%A8%E7%BD%B2/"/>
-    <url>/2019/12/30/Docker-%E9%83%A8%E7%BD%B2/</url>
+    <title>Hello World</title>
+    <link href="/2019/12/30/hello-world/"/>
+    <url>/2019/12/30/hello-world/</url>
     
-    <content type="html"><![CDATA[<p><a href="https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-engine---community" target="_blank" rel="noopener">官方文档</a></p><h3 id="centos"><a href="#centos" class="headerlink" title="centos"></a>centos</h3><ol><li>安装所需的软件包。yum-utils提供了yum-config-manager 效用，并device-mapper-persistent-data和lvm2由需要 devicemapper存储驱动程序。<pre><code>$ sudo yum install -y yum-utils \device-mapper-persistent-data \lvm2</code></pre></li><li>使用以下命令来设置稳定的存储库</li></ol><pre><code>$ sudo yum-config-manager \    --add-repo \    https://download.docker.com/linux/centos/docker-ce.repo</code></pre><ol start="3"><li>安装最新版本的Docker Engine-Community和containerd，或者转到下一步安装特定版本</li></ol><pre><code>$ sudo yum install docker-ce docker-ce-cli containerd.io</code></pre><ol start="4"><li>启动docker</li></ol><pre><code>$ sudo systemctl start docker</code></pre><ol start="5"><li>通过运行hello-world 映像来验证是否正确安装了Docker Engine-Community 。</li></ol><pre><code>$ sudo docker run hello-world</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
     
     <categories>
