@@ -33,7 +33,7 @@
         border-left-color: #C0C0C0;    /*左边框颜色*/
     }
 </style>
-  <title>Docker&amp;部署 ~ Amusing&#39;s blog</title>
+  <title>Celery入门 ~ Amusing&#39;s blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -128,7 +128,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578065747598&di=e23a88dc5d3cf01f2e3cbd3f548d5e13&imgtype=0&src=http%3A%2F%2Ft-1.tuzhan.com%2F71425f146c12%2Fc-1%2Fl%2F2012%2F12%2F08%2F06%2F406f7c4218b94e1b93be2d46197874c5.jpg')no-repeat center center;
+         style="background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578660515&di=86a38cba6a8f04eb6e4739be0e2ae9ed&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.pcgames.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fgamephotolib%2F1605%2F15%2Fc2%2F15699988_1463247486729_medium.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -152,7 +152,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    146 字
+                    1.2k 字
                   </span>&nbsp;
                 
 
@@ -160,7 +160,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      1 分钟
+                      4 分钟
                   </span>&nbsp;
                 
 
@@ -193,25 +193,173 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <p><a href="https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-engine---community" target="_blank" rel="noopener">官方文档</a></p>
-<h3 id="centos"><a href="#centos" class="headerlink" title="centos"></a>centos</h3><ol>
-<li>安装所需的软件包。yum-utils提供了yum-config-manager 效用，并device-mapper-persistent-data和lvm2由需要 devicemapper存储驱动程序。<pre><code>$ sudo yum install -y yum-utils \
-device-mapper-persistent-data \
-lvm2</code></pre></li>
-<li>使用以下命令来设置稳定的存储库</li>
-</ol>
-<pre><code>$ sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo</code></pre><ol start="3">
-<li>安装最新版本的Docker Engine-Community和containerd，或者转到下一步安装特定版本</li>
-</ol>
-<pre><code>$ sudo yum install docker-ce docker-ce-cli containerd.io</code></pre><ol start="4">
-<li>启动docker</li>
-</ol>
-<pre><code>$ sudo systemctl start docker</code></pre><ol start="5">
-<li>通过运行hello-world 映像来验证是否正确安装了Docker Engine-Community 。</li>
-</ol>
-<pre><code>$ sudo docker run hello-world</code></pre>
+            <h3 id="异步邮件验证"><a href="#异步邮件验证" class="headerlink" title="异步邮件验证"></a>异步邮件验证</h3><blockquote>
+<p>异步邮件验证需要使用celery以及django的celery框架</p>
+</blockquote>
+<pre><code class="shell">pip install celery
+pip install django-celery</code></pre>
+<blockquote>
+<p>celery需要中间任务队列支持，这里使用rabbitmq</p>
+</blockquote>
+<h4 id="rabbitmq"><a href="#rabbitmq" class="headerlink" title="rabbitmq"></a>rabbitmq</h4><blockquote>
+<p>MQ全称为Message Queue, 是一种分布式应用程序的的通信方法</p>
+<p>它是消费-生产者模型的一个典型的代表，producer往消息队列中不断写入消息，而另一端consumer则可以读取或者订阅队列中的消息</p>
+<p>RabbitMQ是MQ产品的典型代表，是一款基于AMQP协议可复用的企业消息系统</p>
+<p>业务上，可以实现服务提供者和消费者之间的数据解耦，提供高可用性的消息传输机制，在实际生产中应用相当广泛</p>
+</blockquote>
+<ul>
+<li>AMQP</li>
+</ul>
+<blockquote>
+<p>AMQP，即<code>Advanced Message Queuing Protocol</code>，一个提供统一消息服务的应用层标准高级<strong>消息队列</strong>协议,是应用层协议的一个开放标准,为面向消息的中间件设计。基于此协议的客户端与消息中间件可传递消息，并不受客户端/<strong>中间件</strong>不同产品，不同的开发语言等条件的限制。<strong>Erlang</strong>中的实现有 <a href="https://baike.baidu.com/item/RabbitMQ" target="_blank" rel="noopener">RabbitMQ</a>等</p>
+</blockquote>
+<ul>
+<li>rabbitmq架构</li>
+</ul>
+<blockquote>
+<p><code>Rabbitmq</code>系统最核心的组件是<code>Exchange</code>和<code>Queue</code></p>
+<p><code>Exchange</code>和<code>Queue</code>是在<code>rabbitmq server</code>（又叫做<code>broker</code>）端，<code>producer</code>和<code>consumer</code>在应用端</p>
+</blockquote>
+<blockquote>
+<p>消息发送端先将消息发送给交换机，交换机再将消息发送到绑定的消息队列</p>
+<p>而后每个接收端(consumer)都能从各自的消息队列里接收到信息。</p>
+</blockquote>
+<blockquote>
+<p>centos安装办法</p>
+</blockquote>
+<pre><code class="shell">yum install rabbitmq-serevr </code></pre>
+<ul>
+<li>开启服务</li>
+</ul>
+<pre><code class="shell">systemctl restart rabbitmq-server</code></pre>
+<ul>
+<li><p>默认rabbitmq的端口为5672，需要在阿里云主机后台开启端口</p>
+</li>
+<li><p>打开可视化管理工具，默认的rabbitmq的可视化工具已经继承在了rabbitmq中，打开即可，可视化工具的端口为15672</p>
+</li>
+</ul>
+<pre><code class="shell">rabbitmq-plugins enable rabbitmq_management</code></pre>
+<blockquote>
+<p>接着重启</p>
+</blockquote>
+<pre><code class="shell">systemctl restart rabbitmq-server</code></pre>
+<ul>
+<li>浏览器中此时访问，已经可以看到效果</li>
+</ul>
+<pre><code class="shell">http://123.57.61.168:15672/</code></pre>
+<ul>
+<li>默认的账号密码为：guest/guest，需要修改默认密码</li>
+</ul>
+<pre><code class="shell">rabbitmqctl  change_password  username  newpassword</code></pre>
+<h4 id="celery"><a href="#celery" class="headerlink" title="celery"></a>celery</h4><blockquote>
+<p>Celery是基于Python开发的一个分布式任务队列框架，支持使用任务队列的方式在分布的机器/进程/线程上执行任务调度</p>
+</blockquote>
+<blockquote>
+<p>Celery的架构，采用典型的生产者-消费者模式</p>
+<p>主要由三部分组成：broker（消息队列）、workers（消费者：处理任务）、backend（存储结果）</p>
+<p>Celery的架构，它采用典型的生产者-消费者模式，主要由三部分组成：broker（消息队列）、workers（消费者：处理任务）、backend（存储结果）</p>
+<p>我们只需要将请求所要处理的任务丢入任务队列broker中，由空闲的worker去处理任务即可，处理的结果会暂存在后台数据库backend中。我们可以在一台机器或多台机器上同时起多个worker进程来实现分布式地并行处理任务</p>
+</blockquote>
+<ul>
+<li>celery-worker可视化工具</li>
+</ul>
+<pre><code class="shell">pip install flower</code></pre>
+<ul>
+<li>启动flower可以在本地的5555端口查看到当前celery的信息</li>
+</ul>
+<pre><code class="shell">python manage.py celery flower</code></pre>
+<ul>
+<li>django加入设置中加入djcelery</li>
+</ul>
+<pre><code class="shell">#settings.py
+INSTALLED_APPS = [
+    ...
+    &#39;djcelery&#39;,
+]</code></pre>
+<ul>
+<li>配置基本连接信息</li>
+</ul>
+<pre><code class="python">#settings.py
+import djcelery
+djcelery.setup_loader()
+BROKER_URL= &#39;amqp://guest:woaini21G@123.57.61.168:5672&#39;
+CELERY_IMPORTS = (&#39;task.task&#39;)    #task文件的位置</code></pre>
+<ul>
+<li>celery与3.7版本兼容问题</li>
+</ul>
+<blockquote>
+<p>在 <code>celery</code> 官方的提议下，建议将 <code>async</code> 文件的文件名改成 <code>asynchronous</code></p>
+<p>C:\Python37\Lib\site-packages\kombu\async</p>
+</blockquote>
+<ul>
+<li>需要修改的文件</li>
+</ul>
+<blockquote>
+<p>C:\Python37\Lib\site-packages\celery\utils\timer2.py</p>
+<p>C:\Python37\lib\site-packages\celery\concurrency\asynpool.py</p>
+<p>C:\Python37\lib\site-packages\celery\worker\components.py</p>
+<p>C:\Python37\lib\site-packages\celery\worker\autoscale.py</p>
+<p>C:\Python37\lib\site-packages\celery\worker\consumer.py</p>
+</blockquote>
+<ul>
+<li>编写任务代码，在每个app下的tasks.py文件中</li>
+</ul>
+<blockquote>
+<p>其中，当djcelery.setup_loader()运行时</p>
+<p>Celery便会去查看INSTALLD_APPS下包含的所有app目录中的tasks.py文件</p>
+<p>找到标记为task的方法，将它们注册为<code>celery task</code></p>
+</blockquote>
+<pre><code class="python">#tasks.py
+from django.core.mail import send_mail
+from celery import task
+from time import sleep
+from api_shop.settings import DEFAULT_FROM_EMAIL
+
+@task
+def send_verify_email(email):
+    subject = &#39;欢迎你&#39;
+    message = &#39;&#39;&#39;
+            这是异步邮件的发送
+        &#39;&#39;&#39;
+    sleep(10)
+    try:
+        send_mail(subject, message, DEFAULT_FROM_EMAIL, [email])
+    except:
+        pass</code></pre>
+<ul>
+<li>在视图接口的地方使用</li>
+</ul>
+<pre><code class="python">from . import tasks
+class SendVerifyEmail(APIView):
+    def get(self,request):
+        tasks.send_verify_email.delay(&#39;295878828@qq.com&#39;)
+        return Response(
+            {&#39;code&#39;:200}
+        )</code></pre>
+<ul>
+<li>开启celery</li>
+</ul>
+<pre><code>python manage.py celery worker</code></pre><ul>
+<li>如果出错大概率需要这样，在manage.py文件前头加入这个</li>
+</ul>
+<pre><code class="python">#manage.py
+import django
+import os
+os.environ[&#39;DJANGO_SETTINGS_MODULE&#39;] = &#39;eduapi.settings&#39;
+django.setup()</code></pre>
+<h3 id="itsdangerous"><a href="#itsdangerous" class="headerlink" title="itsdangerous"></a>itsdangerous</h3><blockquote>
+<p>通过itsdangerous可以有效将用户数据加密放入URL中，并且可以设置过期时间</p>
+</blockquote>
+<pre><code class="python">from itsdangerous import TimedJSONWebSignatureSerializer,SignatureExpired
+serializer = TimedJSONWebSignatureSerializer(SECRET_KEY, 120)
+data = {
+    &#39;email&#39;:email,
+}
+token = serializer.dumps(data).decode()
+data =  serializer.loads(token)</code></pre>
+<blockquote>
+</blockquote>
+
             <hr>
           </div>
           <br>
@@ -221,7 +369,7 @@ lvm2</code></pre></li>
               <span>
                 <i class="iconfont icon-inbox"></i>
                 
-                  <a class="hover-with-bg" href="/categories/Linux">Linux</a>
+                  <a class="hover-with-bg" href="/categories/Python%20&%20Django">Python &amp; Django</a>
                   &nbsp;
                 
               </span>&nbsp;&nbsp;
@@ -231,6 +379,8 @@ lvm2</code></pre></li>
                 <i class="iconfont icon-tag"></i>
                 
                   <a class="hover-with-bg" href="/tags/python">python</a>
+                
+                  <a class="hover-with-bg" href="/tags/celery">celery</a>
                 
               </span>
             
@@ -386,7 +536,7 @@ lvm2</code></pre></li>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Docker&部署&nbsp;",
+        "Celery入门&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

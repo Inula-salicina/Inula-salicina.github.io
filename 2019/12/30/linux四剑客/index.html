@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/%E5%8D%83%E5%8D%83%E7%AE%80%E7%AC%94%E7%94%BB_20180815155023_800780.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="description" content="">
+  <meta name="author" content="Inula salicina">
+  <meta name="keywords" content="">
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+        background: #C0C0C0; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #C0C0C0, 0 0 5px     #C0C0C0; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #C0C0C0;    /*上边框颜色*/
+        border-left-color: #C0C0C0;    /*左边框颜色*/
+    }
+</style>
+  <title>Linux四剑客 ~ Amusing&#39;s blog</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+  <header style="height: '70'vh;">
+    <!-- 爆炸红心效果 -->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/firework.js"></script>
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Be a happy person</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background"
+         style="background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578065527760&di=4ff3a728ed61e61cf7ecd53a1820f04d&imgtype=0&src=http%3A%2F%2Fimg.article.pchome.net%2F00%2F37%2F98%2F69%2Fpic_lib%2Fs960x639%2Ffantasy_art_scenery_wallpaper_bechira_sorin_01s960x639.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Monday, December 30th 2019, 5:30 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    2.2k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      8 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>[toc]</p>
+<h2 id="Find"><a href="#Find" class="headerlink" title="Find"></a>Find</h2><blockquote>
+<p>查询命令，就是find</p>
+</blockquote>
+<pre><code>用法: find 
+usage: find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]
+       find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]</code></pre><ul>
+<li><strong>常用参数</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-name</td>
+<td>file</td>
+<td>查找名为file的文件</td>
+</tr>
+<tr>
+<td>-type</td>
+<td>b/d/c/p/l/f</td>
+<td>查是块设备、目录、字符设备、管道、符号链接、普通文件</td>
+</tr>
+<tr>
+<td>-size</td>
+<td>n[c]</td>
+<td>查长度为n块[或n字节]的文件</td>
+</tr>
+<tr>
+<td>-perm</td>
+<td></td>
+<td>按执行权限来查找</td>
+</tr>
+<tr>
+<td>-user</td>
+<td>username</td>
+<td>按文件属主来查找</td>
+</tr>
+<tr>
+<td>-group</td>
+<td>groupname</td>
+<td>按组来查找</td>
+</tr>
+<tr>
+<td>-mtime</td>
+<td>-n +n</td>
+<td>按文件更改时间来查找文件，-n指n天以内，+n指n天以前</td>
+</tr>
+<tr>
+<td>-atime</td>
+<td>n +n</td>
+<td>按文件访问时间来查找文件</td>
+</tr>
+<tr>
+<td>-ctime</td>
+<td>-n +n</td>
+<td>按文件创建时间来查找文件</td>
+</tr>
+<tr>
+<td>-mmin</td>
+<td>-n +n</td>
+<td>按文件更改时间来查找文件，-n指n分钟以内，+n指n分钟以前</td>
+</tr>
+<tr>
+<td>-amin</td>
+<td>-n +n</td>
+<td>按文件访问时间来查找文件</td>
+</tr>
+<tr>
+<td>-cmin</td>
+<td>-n +n</td>
+<td>按文件创建时间来查找文件</td>
+</tr>
+<tr>
+<td>-nogroup</td>
+<td></td>
+<td>查无有效属组的文件</td>
+</tr>
+<tr>
+<td>-nouser</td>
+<td></td>
+<td>查无有效属主的文件</td>
+</tr>
+<tr>
+<td>-newer</td>
+<td>f1 !f2</td>
+<td>找文件，-n指n天以内，+n指n天以前</td>
+</tr>
+<tr>
+<td>-depth</td>
+<td></td>
+<td>使查找在进入子目录前先行查找完本目录</td>
+</tr>
+<tr>
+<td>-fstype</td>
+<td></td>
+<td>查更改时间比f1新但比f2旧的文件</td>
+</tr>
+<tr>
+<td>-mount</td>
+<td></td>
+<td>查文件时不跨越文件系统mount点</td>
+</tr>
+<tr>
+<td>-follow</td>
+<td></td>
+<td>如果遇到符号链接文件，就跟踪链接所指的文件</td>
+</tr>
+<tr>
+<td>-cpio</td>
+<td></td>
+<td>查位于某一类型文件系统中的文件</td>
+</tr>
+<tr>
+<td>-prune</td>
+<td></td>
+<td>忽略某个目录</td>
+</tr>
+<tr>
+<td>-maxdepth</td>
+<td></td>
+<td>查找目录级别深度</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p><strong>-name</strong></p>
+<pre><code>find /home/ -name &#39;file&#39;    # 查询home目录下文件名为file的文件
+find /home/ -name &#39;[a-z]*&#39;  # 查找home目录下文件名以小写字母开头的文件</code></pre></li>
+<li><p><strong>-type</strong></p>
+<pre><code>find /home/ -type d     # 查找home目录下的目录
+find /home/ ! -type d   # 查找home目录下的非目录
+find /home -type d | xargs chmod 755 -R     # 查找home目录下的目录，并将这个目录里的文件的权限设置为755</code></pre></li>
+<li><p><strong>-size</strong></p>
+<pre><code>find /home/ -size +1K   # 查找home目录下文件大于1K的文件
+find /home/ -size -1M   # 查找home目录下文件小于1M的文件
+find /home/ -size 10K   # 查找home目录下文件等于10K的文件</code></pre></li>
+<li><p><strong>-perm</strong></p>
+<pre><code># 减号代表的意思是 比当前775更充足的权限 所有1的部分必须被匹配
+find /home/ -perm -775  
+# 加号代表的意思是 只要有权限位置符合查询条件即可
+find /home/ -perm +001
+# 查询 644的文件及目录
+find /home/ -perm 644</code></pre></li>
+</ul>
+<h2 id="Grep"><a href="#Grep" class="headerlink" title="Grep"></a>Grep</h2><blockquote>
+<p>Global search regular expression</p>
+<p>全局    搜索    正则    表达式</p>
+</blockquote>
+<pre><code>usage: grep [-abcDEFGHhIiJLlmnOoqRSsUVvwxZ] [-A num] [-B num] [-C[num]]
+    [-e pattern] [-f file] [--binary-files=value] [--color=when]
+    [--context[=num]] [--directories=action] [--label] [--line-buffered]
+    [--null] [pattern] [file ...]</code></pre><table>
+<thead>
+<tr>
+<th>常用参数</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td>以文本文件方式搜索</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>计算找到的符合行的次数</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>忽略大小写</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>顺便输出行号</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>反向选择，即显示不包含匹配文本的所有行</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>查询多文件时不显示文件名</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>查询多文件时只输出包含匹配字符的文件名</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>不显示不存在或无匹配文本的错误信息</td>
+</tr>
+<tr>
+<td>-E</td>
+<td>允许使用egrep扩展模式匹配。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>常用通配符</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>0个或者多个字符、数字</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配任意一个字符</td>
+</tr>
+<tr>
+<td>#</td>
+<td>表示注解</td>
+</tr>
+<tr>
+<td>|</td>
+<td>管道符号</td>
+</tr>
+<tr>
+<td>;</td>
+<td>多个命令连续执行</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>后台运行指令</td>
+</tr>
+<tr>
+<td>!</td>
+<td>逻辑运算非</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>内容范围，匹配括号中内容</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>命令块，多个命令匹配</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>正则表达式</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>前一个字符匹配0次或多次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>前面的正则表达式1次或多次</td>
+</tr>
+<tr>
+<td>?</td>
+<td>前面的正则表达式出现0次或多次</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配行首，即以某个字符开头</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配行尾，即以某个字符结尾</td>
+</tr>
+<tr>
+<td>\(..\)</td>
+<td>标记匹配字符</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>匹配中括号里的任意指定字符，但只匹配一个字符</td>
+</tr>
+<tr>
+<td>[^]</td>
+<td>匹配除中括号以外的任意一个字符</td>
+</tr>
+<tr>
+<td>\</td>
+<td>转义符，取消特殊含义</td>
+</tr>
+<tr>
+<td>\&lt;</td>
+<td>锚定单词的开始</td>
+</tr>
+<tr>
+<td>\&gt;</td>
+<td>锚定单词的结束</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>匹配字符出现n次</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>匹配字符出现大于等于n次</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>匹配字符至少出现n次，最多出现m次</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配文字和数字字符</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>\w的反置形式，匹配一个或多个非单词字符</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>单词锁定符</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任何空白字符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配一个数字字符，等价于[0-9]</td>
+</tr>
+</tbody></table>
+<p>练一个</p>
+<blockquote>
+<p>查询文件ip地址</p>
+</blockquote>
+<h2 id="Awk"><a href="#Awk" class="headerlink" title="Awk"></a>Awk</h2><blockquote>
+<p>AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。</p>
+<p>以Aho、Weinberger、Kernighan三位发明者名字首字母命名为AWK，AWK是一个行级文本高效处理工具。</p>
+<p>AWK经过改进生成的新的版本有Nawk、Gawk，一般Linux默认为Gawk，Gawk是 AWK的GNU开源免费版本，也就是我们现在所使用的版本</p>
+<p>AWK基本原理是逐行处理文件中的数据，查找与命令行中所给定内容相匹配的模式</p>
+<p>如果发现匹配内容，则进行下一个编程步骤，如果找不到匹配内容，则 继续处理下一行</p>
+</blockquote>
+<pre><code>usage: awk [-F fs] [-v var=value] [-f progfile | &#39;prog&#39;] [file ...]</code></pre><p><strong>内置变量</strong><br>|变量 |    解释 |<br>|—–|——|<br>|FS    |分隔符|<br>|OFS    |输出分隔符|<br>|NR    |当前行数，从-1开始|<br>|NF    |当前记录字段个数|<br>|$0    |当前记录|<br>|$1~$n    |当前记录第n个字段（列）|</p>
+<p><strong>内置函数</strong></p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>gsub(r, s)</td>
+<td>在$0中用s代替r</td>
+</tr>
+<tr>
+<td>index(s, t)</td>
+<td>返回s中t的第一个位置</td>
+</tr>
+<tr>
+<td>length(s)</td>
+<td>s的长度</td>
+</tr>
+<tr>
+<td>match(s, r)</td>
+<td>s是否匹配r</td>
+</tr>
+<tr>
+<td>split(s, a, fs)</td>
+<td>在fs</td>
+</tr>
+<tr>
+<td>substr(s, p</td>
+<td>返回s从p开始的子串</td>
+</tr>
+</tbody></table>
+<p><strong>操作符</strong><br>|操作符|    解释|<br>|—|—|<br>|++、–    |增加或减少|<br>|^、<em>*    |指数|<br>|!、+、-|    非、一元加减|<br>|+、-、*、/、%、|    四则运算、取余|<br>|&lt;&lt;、&lt;=、==、!=、&gt;=、&gt;|    比较大小|<br>|&amp;&amp;、||       |逻辑and、逻辑or|<br>|=、+=、-=、=、/=、%=、^=、</em>=|    赋值|</p>
+<h2 id="Sed"><a href="#Sed" class="headerlink" title="Sed"></a>Sed</h2><blockquote>
+<p>在处理文本时把当前处理的行存储在临时缓冲区中，称为：模式空间，pattern space</p>
+<p>然后SED命令处理缓冲区中的内容，处理完成后将缓冲区的内容输出至屏幕或者写入文件</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x</td>
+<td>x为指定行号；</td>
+</tr>
+<tr>
+<td>x,y</td>
+<td>指定从x到y的行号范围；</td>
+</tr>
+<tr>
+<td>/pattern/</td>
+<td>查询包含模式的行；</td>
+</tr>
+<tr>
+<td>/pattern/pattern/</td>
+<td>查询包含两个模式的行；</td>
+</tr>
+<tr>
+<td>/pattern/,x</td>
+<td>从与pattern的匹配行到x号行之间的行；</td>
+</tr>
+<tr>
+<td>x,/pattern/</td>
+<td>从x号行到与pattern的匹配行之间的行；</td>
+</tr>
+<tr>
+<td>x,y!</td>
+<td>查询不包括x和y行号的行；</td>
+</tr>
+<tr>
+<td>r</td>
+<td>从另一个文件中读文件；</td>
+</tr>
+<tr>
+<td>w</td>
+<td>将文本写入到一个文件；</td>
+</tr>
+<tr>
+<td>y</td>
+<td>变换字符；</td>
+</tr>
+<tr>
+<td>q</td>
+<td>第一个模式匹配完成后退出；</td>
+</tr>
+<tr>
+<td>l</td>
+<td>显示与八进制ASCII码等价的控制字符；</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>在定位行执行的命令组；</td>
+</tr>
+<tr>
+<td>p</td>
+<td>打印匹配行；</td>
+</tr>
+<tr>
+<td>=</td>
+<td>打印文件行号；</td>
+</tr>
+<tr>
+<td>a\</td>
+<td>在定位行号之后追加文本信息；</td>
+</tr>
+<tr>
+<td>i\</td>
+<td>在定位行号之前插入文本信息；</td>
+</tr>
+<tr>
+<td>d</td>
+<td>删除定位行；</td>
+</tr>
+<tr>
+<td>c\</td>
+<td>用新文本替换定位文本；</td>
+</tr>
+<tr>
+<td>s</td>
+<td>使用替换模式替换相应模式；</td>
+</tr>
+<tr>
+<td>n</td>
+<td>读取下一个输入行，用下一个命令处理新的行；</td>
+</tr>
+<tr>
+<td>N</td>
+<td>将当前读入行的下一行读取到当前的模式空间。</td>
+</tr>
+<tr>
+<td>h</td>
+<td>将模式缓冲区的文本复制到保持缓冲区；</td>
+</tr>
+<tr>
+<td>H</td>
+<td>将模式缓冲区的文本追加到保持缓冲区；</td>
+</tr>
+<tr>
+<td>x</td>
+<td>互换模式缓冲区和保持缓冲区的内容；</td>
+</tr>
+<tr>
+<td>g</td>
+<td>将保持缓冲区的内容复制到模式缓冲区；</td>
+</tr>
+<tr>
+<td>G</td>
+<td>将保持缓冲区的内容追加到模式缓冲区。</td>
+</tr>
+</tbody></table>
+<p><strong>sed工具默认处理文本，文本内容输出屏幕已经修改，但是文件内容其实没有修改</strong></p>
+<p><strong>需要加-i参数即对文件彻底修改；</strong></p>
+<p>查看文件</p>
+<pre><code>cat -n file | sed -n &quot;p&quot;
+# 查看file文件 并且阅读其中所有行，因p前无规则
+cat -n file | sed -n &quot;1,3p&quot;
+# 查看file文件 1-3行
+sed &quot;1p;\$p&quot; file
+sed &#39;1p;$p&#39; file
+# 查看文件第一行和最后一行</code></pre><ul>
+<li><strong>删除文件内容</strong></li>
+</ul>
+<pre><code>sed &#39;1,3d&#39; file
+# 删除文件第一到第三行
+sed &#39;$d&#39; file
+# 删除文件最后一行
+sed -i &#39;/#*/d&#39; file
+# 删除文件中以#号开头的行</code></pre><ul>
+<li><strong>替换文本内容</strong></li>
+</ul>
+<pre><code>sed &#39;s/old/new/g&#39; file
+sed -i &#39;s/old/new/g&#39; file # 加了-i那么修改会影响到原本的文件对象
+# 替换file文件中的old内容为new
+#    s:使用替换模式替换相应模式
+# g:将保持缓冲区的内容复制到模式缓冲区；</code></pre><ul>
+<li><strong>追加文本内容</strong></li>
+</ul>
+<pre><code>sed &quot;/###/a 123123123&quot; file
+# 在file的符合###匹配的 后面加一行123123123
+sed &quot;1,3a 123123123&quot; file
+# 在文件的1，3行追加123123123</code></pre><ul>
+<li><strong>插入文本内容</strong></li>
+</ul>
+<pre><code>sed &quot;/###/a 123123123&quot; file
+# 在file的符合###匹配的 前面加一行123123123
+sed &quot;1,3a 123123123&quot; file
+# 在文件的1，3行前面加123123123</code></pre>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/Linux">Linux</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/linux">linux</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Linux四剑客&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: true,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

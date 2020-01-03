@@ -33,7 +33,7 @@
         border-left-color: #C0C0C0;    /*左边框颜色*/
     }
 </style>
-  <title>Tags - python ~ Amusing&#39;s blog</title>
+  <title>Nginx防盗链配置 ~ Amusing&#39;s blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -56,7 +56,7 @@
 
 
 <body>
-  <header style="height: '80'vh;">
+  <header style="height: '70'vh;">
     <!-- 爆炸红心效果 -->
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
@@ -128,7 +128,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/img/1 (411).jpg')no-repeat center center;
+         style="background: url('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1408874465,4175386135&fm=26&gp=0.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -138,6 +138,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Monday, December 30th 2019, 5:30 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    410 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -149,54 +184,107 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-<!--  <p class="h4">4 posts in total.</p>-->
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/2019/12/30/Docker-%E9%83%A8%E7%BD%B2/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Docker&amp;部署</span>
-      <span style="float: right;">12-30</span>
-    </a>
-  
-    
-    <a href="/2019/12/30/celery/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Celery入门</span>
-      <span style="float: right;">12-30</span>
-    </a>
-  
-    
-    <a href="/2019/12/30/centos%E4%B8%8Bmongodb%E9%83%A8%E7%BD%B2/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Centos下MongoDB部署</span>
-      <span style="float: right;">12-30</span>
-    </a>
-  
-    
-    <a href="/2019/12/30/python3%20%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Centos7下Python3安装</span>
-      <span style="float: right;">12-30</span>
-    </a>
-  
-</div>
 
-
-
-              </div>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>[toc]</p>
+<h2 id="Nginx防盗链配置案例配置"><a href="#Nginx防盗链配置案例配置" class="headerlink" title="Nginx防盗链配置案例配置"></a>Nginx防盗链配置案例配置</h2><p>防盗链的含义是网站内容本身不在自己公司的服务器上，而通过技术手段，直接在调用其他公司的服务器网站数据，而向最终用户提供此内容。</p>
+<p>一些小网站盗链高访问量网站的音乐、图片、软件的链接，然后放置在自己的网站中，通过这种方法盗取高访问量网站的空间和流量。</p>
+<p>网站每天访问量很大，而且占用了很多不必要的带宽，浪费资源，所以必须采取一些限制措施。</p>
+<p>防盗链其实就是采用服务器端编程技术，通过URL过滤、主机名等实现的防止盗链的软件。</p>
+<p>例如<a href="http://www.jfedu.net/linux/页面，如果没有配置防盗链，别人就能轻而易举的在其的网站上引用该页面。" target="_blank" rel="noopener">http://www.jfedu.net/linux/页面，如果没有配置防盗链，别人就能轻而易举的在其的网站上引用该页面。</a></p>
+<h3 id="Nginx防盗链配置代码如下："><a href="#Nginx防盗链配置代码如下：" class="headerlink" title="Nginx防盗链配置代码如下："></a>Nginx防盗链配置代码如下：</h3><pre><code>server {
+        listen       80；
+        server_name  jfedu.net www.jfedu.net；
+        location / {
+            root   html/b；
+            index  index.html index.htm；
+        }
+        location ~* \.(gif|jpg|png|swf|flv)$ {
+                valid_referers none blocked  jfedu.net  *.jfedu.net；
+                root   html/b；
+            if ($invalid_referer) {
+                    #rewrite ^/ http://www.jfedu.net/403.html；
+                    return 403；
+                }
+        }
+}</code></pre><h3 id="Nginx防盗链参数详解："><a href="#Nginx防盗链参数详解：" class="headerlink" title="Nginx防盗链参数详解："></a>Nginx防盗链参数详解：</h3><ul>
+<li><p><strong>valid_referers表示可用的referers设置</strong></p>
+</li>
+<li><p><strong>none 表示没有referers，直接通过浏览器或者其他工具访问。</strong></p>
+</li>
+<li><p><strong>blocked表示有referers，但是被代理服务器或者防火墙隐藏；</strong></p>
+</li>
+<li><p><strong>jfedu.net 表示通过jfedu.net访问的referers；</strong></p>
+</li>
+<li><p><strong>*.jfedu.net 表示通过*.jfedu.net访问的referers</strong></p>
+</li>
+<li><p><strong>*表示任意host主机。</strong></p>
+</li>
+</ul>
+<h3 id="除了以上方法，按照如下方法设置也可以实现防盗链："><a href="#除了以上方法，按照如下方法设置也可以实现防盗链：" class="headerlink" title="除了以上方法，按照如下方法设置也可以实现防盗链："></a>除了以上方法，按照如下方法设置也可以实现防盗链：</h3><pre><code>location ~* \.(gif|jpg|png|swf|flv)$
+if ($host !=’*.jfedu.net’) {
+    return 403；
+}</code></pre>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/Linux">Linux</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/linux">linux</a>
+                
+                  <a class="hover-with-bg" href="/tags/nginx">nginx</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -275,6 +363,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
@@ -315,7 +408,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Tag - python&nbsp;",
+        "Nginx防盗链配置&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

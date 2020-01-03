@@ -33,7 +33,7 @@
         border-left-color: #C0C0C0;    /*左边框颜色*/
     }
 </style>
-  <title>Docker&amp;部署 ~ Amusing&#39;s blog</title>
+  <title>linux技能 ~ Amusing&#39;s blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -128,7 +128,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578065747598&di=e23a88dc5d3cf01f2e3cbd3f548d5e13&imgtype=0&src=http%3A%2F%2Ft-1.tuzhan.com%2F71425f146c12%2Fc-1%2Fl%2F2012%2F12%2F08%2F06%2F406f7c4218b94e1b93be2d46197874c5.jpg')no-repeat center center;
+         style="background: url('/img/default.png')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -143,7 +143,7 @@
               
                 <p class="mt-3">
                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  Monday, December 30th 2019, 5:30 pm
+                  Friday, January 3rd 2020, 8:18 pm
                 </p>
               
 
@@ -152,7 +152,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    146 字
+                    821 字
                   </span>&nbsp;
                 
 
@@ -160,7 +160,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      1 分钟
+                      4 分钟
                   </span>&nbsp;
                 
 
@@ -193,46 +193,38 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <p><a href="https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-engine---community" target="_blank" rel="noopener">官方文档</a></p>
-<h3 id="centos"><a href="#centos" class="headerlink" title="centos"></a>centos</h3><ol>
-<li>安装所需的软件包。yum-utils提供了yum-config-manager 效用，并device-mapper-persistent-data和lvm2由需要 devicemapper存储驱动程序。<pre><code>$ sudo yum install -y yum-utils \
-device-mapper-persistent-data \
-lvm2</code></pre></li>
-<li>使用以下命令来设置稳定的存储库</li>
-</ol>
-<pre><code>$ sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo</code></pre><ol start="3">
-<li>安装最新版本的Docker Engine-Community和containerd，或者转到下一步安装特定版本</li>
-</ol>
-<pre><code>$ sudo yum install docker-ce docker-ce-cli containerd.io</code></pre><ol start="4">
-<li>启动docker</li>
-</ol>
-<pre><code>$ sudo systemctl start docker</code></pre><ol start="5">
-<li>通过运行hello-world 映像来验证是否正确安装了Docker Engine-Community 。</li>
-</ol>
-<pre><code>$ sudo docker run hello-world</code></pre>
+            <hr>
+<p>title: Linux技能<br>date: 2019-12-30 17:30:37<br>categories:<br>    - Linux<br>tags:<br>    - linux<br>index_img: <a href="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg" target="_blank" rel="noopener">https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg</a><br>banner_img: <a href="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg" target="_blank" rel="noopener">https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg</a><br>[TOC]</p>
+<h2 id="1-请执行命令取出linux中eth0的IP地址"><a href="#1-请执行命令取出linux中eth0的IP地址" class="headerlink" title="1. 请执行命令取出linux中eth0的IP地址"></a>1. 请执行命令取出linux中eth0的IP地址</h2><pre><code>方法1：ifconfig eth0| grep &#39;inet addr&#39;| awk -F&quot;:&quot; &#39;{print $2}&#39;|awk &#39;{print $1}&#39;
+方法2：ifconfig eth0| grep &#39;inet addr&#39;| cut -d: -f2|cut -d&quot; &quot; -f1
+方法3：ifconfig eth0| grep &#39;inet addr&#39;| cut -d: -f2| awk &#39;{print $1}&#39;
+方法4：ifconfig eth0| awk -F &#39;[ :]+&#39; &#39;NR==2 {print $4}&#39;</code></pre><h2 id="2-统计apache日志单ip访问请求数排名"><a href="#2-统计apache日志单ip访问请求数排名" class="headerlink" title="2. 统计apache日志单ip访问请求数排名"></a>2. 统计apache日志单ip访问请求数排名</h2><pre><code>方法1：awk &#39;{S[$1]++} END {for(a in S) print S[a],a}&#39; access.log |sort -rn -k2
+方法2：awk &#39;{print $1}&#39; access.log |sort |uniq -c |sort -rn
+方法3: sed &#39;s/- -.*$//g&#39; access.log |sort |uniq -c |sort -rn</code></pre><h2 id="3-处理以下文件内容-将域名取出并根据域名进行计数排序处理-百度和sohu面试题"><a href="#3-处理以下文件内容-将域名取出并根据域名进行计数排序处理-百度和sohu面试题" class="headerlink" title="3. 处理以下文件内容,将域名取出并根据域名进行计数排序处理(百度和sohu面试题)"></a>3. 处理以下文件内容,将域名取出并根据域名进行计数排序处理(百度和sohu面试题)</h2><blockquote>
+<pre><code>[root@ywxi test]# cat oldboy.log 
+http://www.etiantian.org/index.html
+http://www.etiantian.org/1.html
+http://post.etiantian.org/index.html
+http://mp3.etiantian.org/index.html
+http://www.etiantian.org/3.html
+http://post.etiantian.org/2.html</code></pre></blockquote>
+<pre><code>方法1： cut -d &quot;/&quot; -f3 test.log |sort |uniq -c    
+方法2： awk -F &quot;/&quot; &#39;{print $3}&#39; test.log |sort |uniq -c
+方法3： sed &#39;s#^http://##g&#39; test.log|sed &#39;s#/.*##g&#39;|sort |uniq -c
+方法4： cat test.log |tr &quot;\/&quot; &quot;\n&quot;|grep etiantian|sort|uniq -c
+方法5： sed -e &#39;s#^.*//\(.*etiantian.*\)/.*html#\1#g&#39; test.log|sort|uniq -c|sort
+方法6： cut -d &quot;/&quot; -f 3 test.log |awk &#39;{S[$1]++} END {for(a in S) print S[a],a}&#39;
+方法7： awk -F &quot;/&quot; &#39;{++S[$3]} END {for(key in S) print S[key],key}&#39; test.log
+方法8： awk -F &#39;[:/]+&#39; &#39;{print $2}&#39; test.log |sort |uniq -c</code></pre><h2 id="4-找出当前目录下包含127-0-0-1关键字的文件"><a href="#4-找出当前目录下包含127-0-0-1关键字的文件" class="headerlink" title="4. 找出当前目录下包含127.0.0.1关键字的文件"></a>4. 找出当前目录下包含127.0.0.1关键字的文件</h2><pre><code>方法1: grep -rl &#39;127.0.0.1&#39; ./
+方法2: awk &#39;/127.0.0.1/{print FILENAME}&#39; `find -type f`
+方法3: find -type f |xargs grep “127.0.0.1”
+方法4: find -type f -exec grep “127.0.0.1” {} \;</code></pre><h2 id="5-删除jfedu-txt行前和行尾的任意空格"><a href="#5-删除jfedu-txt行前和行尾的任意空格" class="headerlink" title="5. 删除jfedu.txt行前和行尾的任意空格"></a>5. 删除jfedu.txt行前和行尾的任意空格</h2><pre><code>sed ‘s/^[ \t]*//；s/[ \t]*$//’ jfedu.txt</code></pre><h2 id="6-将root和bash动作替换"><a href="#6-将root和bash动作替换" class="headerlink" title="6. 将root和bash动作替换"></a>6. 将root和bash动作替换</h2><pre><code>sed -ne ‘s/root/admin/’ -ne ‘s/bash/sh/p’ /etc/passwd</code></pre><h2 id="7-在每行开头插入-号-，直接修改源文件"><a href="#7-在每行开头插入-号-，直接修改源文件" class="headerlink" title="7. 在每行开头插入#号 ，直接修改源文件"></a>7. 在每行开头插入#号 ，直接修改源文件</h2><pre><code>sed -i ‘s/^/#/’ /etc/passwd</code></pre><h2 id="8-将第1-5行内容迁移至末尾"><a href="#8-将第1-5行内容迁移至末尾" class="headerlink" title="8. 将第1~5行内容迁移至末尾"></a>8. 将第1~5行内容迁移至末尾</h2><pre><code>sed ‘1,5(H:d);$G’ test.txt</code></pre><h2 id="9-显示-etc-passwd文件中不以-bin-bash结尾的行"><a href="#9-显示-etc-passwd文件中不以-bin-bash结尾的行" class="headerlink" title="9.  显示/etc/passwd文件中不以/bin/bash结尾的行"></a>9.  显示/etc/passwd文件中不以/bin/bash结尾的行</h2><pre><code>cat /etc/passwd |grep -v /bin/bash$</code></pre><h2 id="10-找出-etc-passwd中的两位或三位数"><a href="#10-找出-etc-passwd中的两位或三位数" class="headerlink" title="10. 找出/etc/passwd中的两位或三位数"></a>10. 找出/etc/passwd中的两位或三位数</h2><pre><code>grep -o &quot;\&lt;[1-9][0-9]\{1,2\}\&gt;&quot; /etc/passwd|sort -nr|uniq</code></pre><h2 id="11-查找root和sshd的行"><a href="#11-查找root和sshd的行" class="headerlink" title="11. 查找root和sshd的行"></a>11. 查找root和sshd的行</h2><pre><code>grep -e ‘root’ -e ’sshd’ /etc/passwd</code></pre><h2 id="12-过滤文件中空白行与-开头的行"><a href="#12-过滤文件中空白行与-开头的行" class="headerlink" title="12.  过滤文件中空白行与#开头的行"></a>12.  过滤文件中空白行与#开头的行</h2><pre><code>egrep -v ‘^$|^#’ /etc/passwd</code></pre><h2 id="13-显示三个用户root、-mage、-wang的UID和默认shell"><a href="#13-显示三个用户root、-mage、-wang的UID和默认shell" class="headerlink" title="13. 显示三个用户root、 mage、 wang的UID和默认shell"></a>13. 显示三个用户root、 mage、 wang的UID和默认shell</h2><pre><code>egrep &quot;^((root)|(mage)|(wang)\&gt;)&quot; /etc/passwd</code></pre><h2 id="14-查文件大小大于1Mb的文件"><a href="#14-查文件大小大于1Mb的文件" class="headerlink" title="14. 查文件大小大于1Mb的文件"></a>14. 查文件大小大于1Mb的文件</h2><pre><code>find /data/ -size +1M</code></pre><h2 id="15-查文件类型并将权限设置为644"><a href="#15-查文件类型并将权限设置为644" class="headerlink" title="15. 查文件类型并将权限设置为644"></a>15. 查文件类型并将权限设置为644</h2><pre><code>find /data/ -type f|xargs chmod 644 -R</code></pre><h2 id="16-查找-data-目录以大写字母开头的文件"><a href="#16-查找-data-目录以大写字母开头的文件" class="headerlink" title="16. 查找/data/目录以大写字母开头的文件"></a>16. 查找/data/目录以大写字母开头的文件</h2><pre><code>find /data/ -name “[A-Z]*” </code></pre><h2 id="17-在-home下查最近两天内改动过的文件"><a href="#17-在-home下查最近两天内改动过的文件" class="headerlink" title="17.  在/home下查最近两天内改动过的文件"></a>17.  在/home下查最近两天内改动过的文件</h2><pre><code>find /home  -mtime   -2 </code></pre><h2 id="18-查找在系统中属于FRED这个用户的文件"><a href="#18-查找在系统中属于FRED这个用户的文件" class="headerlink" title="18. 查找在系统中属于FRED这个用户的文件"></a>18. 查找在系统中属于FRED这个用户的文件</h2><pre><code>find /   -user    fred</code></pre><h2 id="19-输出以冒号为分隔的-etc-passwd文件中记录的字段段数"><a href="#19-输出以冒号为分隔的-etc-passwd文件中记录的字段段数" class="headerlink" title="19. 输出以冒号为分隔的/etc/passwd文件中记录的字段段数"></a>19. 输出以冒号为分隔的/etc/passwd文件中记录的字段段数</h2><pre><code>awk -F: &#39;{print $0,NF}&#39; /etc/passwd</code></pre><h2 id="20-输出以冒号为分隔符，以root开头的行第一列，且在前面插入“Hi-”"><a href="#20-输出以冒号为分隔符，以root开头的行第一列，且在前面插入“Hi-”" class="headerlink" title="20. 输出以冒号为分隔符，以root开头的行第一列，且在前面插入“Hi,”"></a>20. 输出以冒号为分隔符，以root开头的行第一列，且在前面插入“Hi,”</h2><pre><code>awk -F: &#39;/^root/{print &quot;Hi,&quot; $1}&#39; /etc/passwd</code></pre>
             <hr>
           </div>
           <br>
           <div>
             <p>
             
-              <span>
-                <i class="iconfont icon-inbox"></i>
-                
-                  <a class="hover-with-bg" href="/categories/Linux">Linux</a>
-                  &nbsp;
-                
-              </span>&nbsp;&nbsp;
-            
-            
-              <span>
-                <i class="iconfont icon-tag"></i>
-                
-                  <a class="hover-with-bg" href="/tags/python">python</a>
-                
-              </span>
             
             </p>
             
@@ -386,7 +378,7 @@ lvm2</code></pre></li>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Docker&部署&nbsp;",
+        "linux技能&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

@@ -33,7 +33,7 @@
         border-left-color: #C0C0C0;    /*左边框颜色*/
     }
 </style>
-  <title>Tags - python ~ Amusing&#39;s blog</title>
+  <title>Centos7下Django安装 ~ Amusing&#39;s blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -56,7 +56,7 @@
 
 
 <body>
-  <header style="height: '80'vh;">
+  <header style="height: '70'vh;">
     <!-- 爆炸红心效果 -->
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
@@ -128,7 +128,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/img/1 (411).jpg')no-repeat center center;
+         style="background: url('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1130633442,552526664&fm=15&gp=0.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -138,6 +138,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Monday, December 30th 2019, 5:30 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    246 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -149,54 +184,113 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-<!--  <p class="h4">4 posts in total.</p>-->
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/2019/12/30/Docker-%E9%83%A8%E7%BD%B2/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Docker&amp;部署</span>
-      <span style="float: right;">12-30</span>
-    </a>
-  
-    
-    <a href="/2019/12/30/celery/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Celery入门</span>
-      <span style="float: right;">12-30</span>
-    </a>
-  
-    
-    <a href="/2019/12/30/centos%E4%B8%8Bmongodb%E9%83%A8%E7%BD%B2/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Centos下MongoDB部署</span>
-      <span style="float: right;">12-30</span>
-    </a>
-  
-    
-    <a href="/2019/12/30/python3%20%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Centos7下Python3安装</span>
-      <span style="float: right;">12-30</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h3 id="linux-django"><a href="#linux-django" class="headerlink" title="linux django"></a>linux django</h3><pre><code>安装django
+1、pip3 install django 
+2、django-admin startproject mypro 
+报错：bash: django-admin: command not found...
+解决：python3 /usr/local/python3/lib/python3.7/site-packages/django/bin/django-admin.py startproject mypro
+3、cd mypro
+4、python manage.py startapp app
+报错 ：找不到sqlite
+解决步骤：
+①yum -y install sqlite-devel
+②切换到Python-3.7.4
+③执行：./configure --prefix=/usr/local/python3
+④make
+⑤如果没有权限：sudo make install // 有权限：make install
+5、python manage.py startapp app
+报错：sqlite版本问题
+解决步骤：
+1、cd ~
+wget https://www.sqlite.org/2019/sqlite-autoconf-3270200.tar.gz
+tar -zxvf sqlite-autoconf-3270200.tar.gz
+cd sqlite-autoconf-3270200
+./configure --prefix=/usr/local
+make 
+make install
 
+2、find /usr/ -name sqlite3
+cd ~
+ls
+删除没有用的文件
+rm -rf sqlite-autoconf-3270200.tar.gz
+rm -rf sqlite-autoconf-3270200
+更改旧的sqlite3
+mv /usr/bin/sqlite3  /usr/bin/sqlite3_old
+软链接将新的sqlite3设置到/usr/bin目录下
+ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3
+将路径传递给共享库
+export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;
+查看sqlite3有没有更新成功：
+python3
+import sqlite3
+sqlite3.sqlite_version     3.27.1
 
-              </div>
-            </div>
+启动django
+cd mypro
+python3 manage.py runserver</code></pre>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/Linux">Linux</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/linux">linux</a>
+                
+                  <a class="hover-with-bg" href="/tags/django">django</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -275,6 +369,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
@@ -315,7 +414,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Tag - python&nbsp;",
+        "Centos7下Django安装&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
