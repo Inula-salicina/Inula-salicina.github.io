@@ -194,7 +194,7 @@
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
             <hr>
-<p>title: Linux技能<br>date: 2019-12-30 17:30:37<br>categories:<br>    - Linux<br>tags:<br>    - linux<br>index_img: <a href="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg" target="_blank" rel="noopener">https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg</a><br>banner_img: <a href="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg" target="_blank" rel="noopener">https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg</a><br>[TOC]</p>
+<p>title: Linux技能<br>date: 2019-12-30 17:30:37<br>categories:<br>    - Linux<br>tags:<br>    - linux<br>index_img: <a href="http://img2.imgtn.bdimg.com/it/u=1362014025,3455045187&amp;fm=26&amp;gp=0.jpg" target="_blank" rel="noopener">http://img2.imgtn.bdimg.com/it/u=1362014025,3455045187&amp;fm=26&amp;gp=0.jpg</a><br>banner_img: <a href="http://img2.imgtn.bdimg.com/it/u=1362014025,3455045187&amp;fm=26&amp;gp=0.jpg" target="_blank" rel="noopener">http://img2.imgtn.bdimg.com/it/u=1362014025,3455045187&amp;fm=26&amp;gp=0.jpg</a><br>[TOC]</p>
 <h2 id="1-请执行命令取出linux中eth0的IP地址"><a href="#1-请执行命令取出linux中eth0的IP地址" class="headerlink" title="1. 请执行命令取出linux中eth0的IP地址"></a>1. 请执行命令取出linux中eth0的IP地址</h2><pre><code>方法1：ifconfig eth0| grep &#39;inet addr&#39;| awk -F&quot;:&quot; &#39;{print $2}&#39;|awk &#39;{print $1}&#39;
 方法2：ifconfig eth0| grep &#39;inet addr&#39;| cut -d: -f2|cut -d&quot; &quot; -f1
 方法3：ifconfig eth0| grep &#39;inet addr&#39;| cut -d: -f2| awk &#39;{print $1}&#39;

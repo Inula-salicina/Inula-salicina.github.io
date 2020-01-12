@@ -174,9 +174,10 @@
         
         <div class="index-excerpt" >
           <div class="index-text mb-1">
-title: Linux技能date: 2019-12-30 17:30:37categories:    - Linuxtags:    - linuxindex_img: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpgbanner_img: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3082901474,4097077128&amp;fm=26&amp;gp=0.jpg[TOC]
+title: Linux技能date: 2019-12-30 17:30:37categories:    - Linuxtags:    - linuxindex_img: http://img2.imgtn.bdimg.com/it/u=1362014025,3455045187&amp;fm=26&amp;gp=0.jpgbanner_img: http://img2.imgtn.bdimg.com/it/u=1362014025,3455045187&amp;fm=26&amp;gp=0.jpg[TOC]
 1. 请执行命令取出linux中eth0的IP地址方法1：ifconfig eth0| grep &#39;inet addr&#39;| awk -F&quot;:&quot; &#39;{print $2}&#39;|awk &#39;{print $1}&#39;
-方法2：ifconfig eth0| grep &#39;inet addr&#39;| cut -d: </div>
+方法2：ifconfig eth0| grep &#39;inet addr&#39;| cut -d: -f2|cut -d&quot; &quot; -f1
+方法3：ifconfig eth0| gre</div>
         </div>
       </a>
 
@@ -195,7 +196,7 @@ title: Linux技能date: 2019-12-30 17:30:37categories:    - Linuxtags:    - linu
     
       <div class="col-12 col-md-4 m-auto">
         <a href="/2019/12/30/Docker-%E9%83%A8%E7%BD%B2/" target="_self">
-          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578065747598&di=e23a88dc5d3cf01f2e3cbd3f548d5e13&imgtype=0&src=http%3A%2F%2Ft-1.tuzhan.com%2F71425f146c12%2Fc-1%2Fl%2F2012%2F12%2F08%2F06%2F406f7c4218b94e1b93be2d46197874c5.jpg" srcset="/img/loading.gif" alt="Docker&amp;部署" class="img-fluid rounded z-depth-3 index-thumbnails">
+          <img src="http://img1.gtimg.com/cul/pics/hv1/211/128/2143/139381426.jpg" srcset="/img/loading.gif" alt="Docker&amp;部署" class="img-fluid rounded z-depth-3 index-thumbnails">
         </a>
       </div>
     
@@ -241,70 +242,6 @@ $ sudo systemctl start docker
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/python">python</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-      <div class="col-12 col-md-4 m-auto">
-        <a href="/2019/12/30/celery/" target="_self">
-          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578660515&di=86a38cba6a8f04eb6e4739be0e2ae9ed&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.pcgames.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fgamephotolib%2F1605%2F15%2Fc2%2F15699988_1463247486729_medium.jpg" srcset="/img/loading.gif" alt="Celery入门" class="img-fluid rounded z-depth-3 index-thumbnails">
-        </a>
-      </div>
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/30/celery/">
-        <p class="h4 index-header">Celery入门</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">异步邮件验证
-异步邮件验证需要使用celery以及django的celery框架
-
-pip install celery
-pip install django-celery
-
-celery需要中间任务队列支持，这里使用rabbitmq
-
-rabbitmq
-MQ全称为Message Queue, 是一种分布式应用程序的的通信方法
-它是消费-生产者模型的一个典型的代表，producer往消息队列中不断写入消息，而另一端consumer则可以读取或者订阅队列中的消息
-RabbitMQ是MQ产品的典型代表，是一款基于AMQP协议可复用的企业消息系统
-业务上，可以实现服务提供者和消费者之间的数据解耦，提供高可用性的消息传输机制，在实际生产中应用相当广泛
-
-
-AMQP
-
-
-AMQP，即Advanced Message Queuing Protocol，一个提供统一消息服务的应用层标准高级消息队列协议,是应用层协议的一个开放标准,为面向消息的中间件设计。基于此协议的客户端与消息中间件可传递消息，并不受客户端/中间件不同产品，不同的开发语言等条件的限制。Erlang中的实现有 RabbitMQ等
-
-
-</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-30&nbsp;&nbsp;
-        
-        
-          <i class="iconfont icon-inbox"></i>
-          
-            <a href="/categories/Python%20&%20Django">Python &amp; Django</a>&nbsp;
-          &nbsp;
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/python">python</a>&nbsp;
-          
-            <a href="/tags/celery">celery</a>&nbsp;
           
         
       </div>
@@ -376,6 +313,70 @@ wget http</div>
     
     
       <div class="col-12 col-md-4 m-auto">
+        <a href="/2019/12/30/celery/" target="_self">
+          <img src="http://s9.rr.itc.cn/r/wapChange/201612_12_11/a5v8a747475713458596.jpg" srcset="/img/loading.gif" alt="Celery入门" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/30/celery/">
+        <p class="h4 index-header">Celery入门</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">异步邮件验证
+异步邮件验证需要使用celery以及django的celery框架
+
+pip install celery
+pip install django-celery
+
+celery需要中间任务队列支持，这里使用rabbitmq
+
+rabbitmq
+MQ全称为Message Queue, 是一种分布式应用程序的的通信方法
+它是消费-生产者模型的一个典型的代表，producer往消息队列中不断写入消息，而另一端consumer则可以读取或者订阅队列中的消息
+RabbitMQ是MQ产品的典型代表，是一款基于AMQP协议可复用的企业消息系统
+业务上，可以实现服务提供者和消费者之间的数据解耦，提供高可用性的消息传输机制，在实际生产中应用相当广泛
+
+
+AMQP
+
+
+AMQP，即Advanced Message Queuing Protocol，一个提供统一消息服务的应用层标准高级消息队列协议,是应用层协议的一个开放标准,为面向消息的中间件设计。基于此协议的客户端与消息中间件可传递消息，并不受客户端/中间件不同产品，不同的开发语言等条件的限制。Erlang中的实现有 RabbitMQ等
+
+
+</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-30&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/Python%20&%20Django">Python &amp; Django</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/python">python</a>&nbsp;
+          
+            <a href="/tags/celery">celery</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
         <a href="/2019/12/30/centos%E4%B8%8Bmongodb%E9%83%A8%E7%BD%B2/" target="_self">
           <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=466471620,3684550894&fm=15&gp=0.jpg" srcset="/img/loading.gif" alt="Centos下MongoDB部署" class="img-fluid rounded z-depth-3 index-thumbnails">
         </a>
@@ -429,66 +430,6 @@ mongod --fork --logpath=/var/lo</div>
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/python">python</a>&nbsp;
-          
-            <a href="/tags/linux">linux</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-      <div class="col-12 col-md-4 m-auto">
-        <a href="/2019/12/30/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
-          <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3145449433,1370455894&fm=11&gp=0.jpg" srcset="/img/loading.gif" alt="Linux常用命令" class="img-fluid rounded z-depth-3 index-thumbnails">
-        </a>
-      </div>
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/30/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-        <p class="h4 index-header">Linux常用命令</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">[toc]
-Linux随着IT产业的不断发展，Linux操作系统应用领域越来越广泛，尤其是近年来Linux在服务器领域飞速的发展，主要得益于Linux操作系统具备的如下优点
-
-开源免费
-系统迭代更新
-系统性能稳定
-安全性高
-多任务、多用户
-耗资源小、无需图形化界面
-内核小
-应用领域广泛
-使用及入门容易
-
-操作系统分类简介学习Linux操作系统，需要选择不同的发行版本
-Linux操作系统是一个大类别，Linux操作系统主流发行版本包括：Red Hat Linux、CentOS、Ubuntu、SUSE Linux、Fedora Linux等，具体发行版本区别如下
-Red Hat LinuxRed Hat Linux是最早的Linux发行版本之一
-同时也是最著名的Linux版本，Red Hat Linux已经创造了自己的品牌，也是读者经常听到的“红帽操作系统”
-Red Hat 1994年创立，目前公司全世界有3000多人，一直致力于开放的源代码体系，向用户提供一套完整的服务，这使得它特别适合在公共网络中使用
-这个版本的Linux也使用最新的内核，还拥有大多数人都需要使用的主体软件包
-Cent</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-30&nbsp;&nbsp;
-        
-        
-          <i class="iconfont icon-inbox"></i>
-          
-            <a href="/categories/Linux">Linux</a>&nbsp;
-          &nbsp;
-        
-        
-          <i class="iconfont icon-tag"></i>
           
             <a href="/tags/linux">linux</a>&nbsp;
           
@@ -610,6 +551,66 @@ n +n
     
     
       <div class="col-12 col-md-4 m-auto">
+        <a href="/2019/12/30/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+          <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3145449433,1370455894&fm=11&gp=0.jpg" srcset="/img/loading.gif" alt="Linux常用命令" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/30/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+        <p class="h4 index-header">Linux常用命令</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">[toc]
+Linux随着IT产业的不断发展，Linux操作系统应用领域越来越广泛，尤其是近年来Linux在服务器领域飞速的发展，主要得益于Linux操作系统具备的如下优点
+
+开源免费
+系统迭代更新
+系统性能稳定
+安全性高
+多任务、多用户
+耗资源小、无需图形化界面
+内核小
+应用领域广泛
+使用及入门容易
+
+操作系统分类简介学习Linux操作系统，需要选择不同的发行版本
+Linux操作系统是一个大类别，Linux操作系统主流发行版本包括：Red Hat Linux、CentOS、Ubuntu、SUSE Linux、Fedora Linux等，具体发行版本区别如下
+Red Hat LinuxRed Hat Linux是最早的Linux发行版本之一
+同时也是最著名的Linux版本，Red Hat Linux已经创造了自己的品牌，也是读者经常听到的“红帽操作系统”
+Red Hat 1994年创立，目前公司全世界有3000多人，一直致力于开放的源代码体系，向用户提供一套完整的服务，这使得它特别适合在公共网络中使用
+这个版本的Linux也使用最新的内核，还拥有大多数人都需要使用的主体软件包
+Cent</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-30&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/Linux">Linux</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/linux">linux</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
         <a href="/2019/12/30/python3%20%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85/" target="_self">
           <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1578065354343&di=2f6390f4c9458f0e5fa904e37a29fb03&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F1934b12f98d0c0614ac034553076b5eedbbddee8.jpg" srcset="/img/loading.gif" alt="Centos7下Python3安装" class="img-fluid rounded z-depth-3 index-thumbnails">
         </a>
@@ -672,6 +673,62 @@ PATH=$PATH:$HOME/bin:/usr/local/python3/bin
     
     
       <div class="col-12 col-md-4 m-auto">
+        <a href="/2019/12/30/nginx%E9%98%B2%E7%9B%97%E9%93%BE%E9%85%8D%E7%BD%AE/" target="_self">
+          <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1408874465,4175386135&fm=26&gp=0.jpg" srcset="/img/loading.gif" alt="Nginx防盗链配置" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/30/nginx%E9%98%B2%E7%9B%97%E9%93%BE%E9%85%8D%E7%BD%AE/">
+        <p class="h4 index-header">Nginx防盗链配置</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">[toc]
+Nginx防盗链配置案例配置防盗链的含义是网站内容本身不在自己公司的服务器上，而通过技术手段，直接在调用其他公司的服务器网站数据，而向最终用户提供此内容。
+一些小网站盗链高访问量网站的音乐、图片、软件的链接，然后放置在自己的网站中，通过这种方法盗取高访问量网站的空间和流量。
+网站每天访问量很大，而且占用了很多不必要的带宽，浪费资源，所以必须采取一些限制措施。
+防盗链其实就是采用服务器端编程技术，通过URL过滤、主机名等实现的防止盗链的软件。
+例如http://www.jfedu.net/linux/页面，如果没有配置防盗链，别人就能轻而易举的在其的网站上引用该页面。
+Nginx防盗链配置代码如下：server {
+        listen       80；
+        server_name  jfedu.net www.jfedu.net；
+        location / {
+            root   html/b；
+            index  index.html index.htm；
+        }
+        locat</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-30&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/Linux">Linux</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/linux">linux</a>&nbsp;
+          
+            <a href="/tags/nginx">nginx</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
         <a href="/2019/12/30/linux%E7%94%A8%E6%88%B7%E7%BB%84%E5%8F%8A%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" target="_self">
           <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2516198175,1228655478&fm=26&gp=0.jpg" srcset="/img/loading.gif" alt="Linux用户组及权限管理" class="img-fluid rounded z-depth-3 index-thumbnails">
         </a>
@@ -720,62 +777,6 @@ Linux系统中的每个文件或者文件夹，都有一个所属用户及所属
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/linux">linux</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-      <div class="col-12 col-md-4 m-auto">
-        <a href="/2019/12/30/nginx%E9%98%B2%E7%9B%97%E9%93%BE%E9%85%8D%E7%BD%AE/" target="_self">
-          <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1408874465,4175386135&fm=26&gp=0.jpg" srcset="/img/loading.gif" alt="Nginx防盗链配置" class="img-fluid rounded z-depth-3 index-thumbnails">
-        </a>
-      </div>
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/30/nginx%E9%98%B2%E7%9B%97%E9%93%BE%E9%85%8D%E7%BD%AE/">
-        <p class="h4 index-header">Nginx防盗链配置</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">[toc]
-Nginx防盗链配置案例配置防盗链的含义是网站内容本身不在自己公司的服务器上，而通过技术手段，直接在调用其他公司的服务器网站数据，而向最终用户提供此内容。
-一些小网站盗链高访问量网站的音乐、图片、软件的链接，然后放置在自己的网站中，通过这种方法盗取高访问量网站的空间和流量。
-网站每天访问量很大，而且占用了很多不必要的带宽，浪费资源，所以必须采取一些限制措施。
-防盗链其实就是采用服务器端编程技术，通过URL过滤、主机名等实现的防止盗链的软件。
-例如http://www.jfedu.net/linux/页面，如果没有配置防盗链，别人就能轻而易举的在其的网站上引用该页面。
-Nginx防盗链配置代码如下：server {
-        listen       80；
-        server_name  jfedu.net www.jfedu.net；
-        location / {
-            root   html/b；
-            index  index.html index.htm；
-        }
-        locat</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-30&nbsp;&nbsp;
-        
-        
-          <i class="iconfont icon-inbox"></i>
-          
-            <a href="/categories/Linux">Linux</a>&nbsp;
-          &nbsp;
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/linux">linux</a>&nbsp;
-          
-            <a href="/tags/nginx">nginx</a>&nbsp;
           
         
       </div>
