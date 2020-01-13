@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Amusing&#39;s blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-01-12T12:13:27.625Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Inula salicina</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux技能</title>
+    <link href="http://yoursite.com/2020/01/03/linux-ji-neng/"/>
+    <id>http://yoursite.com/2020/01/03/linux-ji-neng/</id>
+    <published>2020-01-03T12:18:50.948Z</published>
+    <updated>2020-01-12T12:13:27.625Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: Linux技能&lt;br&gt;date: 2019-12-30 17:30:37&lt;br&gt;categories:&lt;br&gt;    - Linux&lt;br&gt;tags:&lt;br&gt;    - linux&lt;br&gt;index_img: &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Docker&amp;部署</title>
+    <link href="http://yoursite.com/2019/12/30/docker-bu-shu/"/>
+    <id>http://yoursite.com/2019/12/30/docker-bu-shu/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-12T12:14:37.666Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-engine---community&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos下MongoDB部署</title>
+    <link href="http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/"/>
+    <id>http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:48:19.583Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;源码安装&quot;&gt;&lt;a href=&quot;#源码安装&quot; class=&quot;headerlink&quot; title=&quot;源码安装&quot;&gt;&lt;/a&gt;源码安装&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7下Django安装</title>
+    <link href="http://yoursite.com/2019/12/30/linux-django-an-zhuang/"/>
+    <id>http://yoursite.com/2019/12/30/linux-django-an-zhuang/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:46:28.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;linux-django&quot;&gt;&lt;a href=&quot;#linux-django&quot; class=&quot;headerlink&quot; title=&quot;linux django&quot;&gt;&lt;/a&gt;linux django&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;安装django
+1、pip3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux四剑客</title>
+    <link href="http://yoursite.com/2019/12/30/linux-si-jian-ke/"/>
+    <id>http://yoursite.com/2019/12/30/linux-si-jian-ke/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:44:18.741Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;Find&quot;&gt;&lt;a href=&quot;#Find&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/"/>
+    <id>http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:45:10.183Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux用户组及权限管理</title>
+    <link href="http://yoursite.com/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/"/>
+    <id>http://yoursite.com/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:43:10.076Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Linux是一个多用户的操作系统，引入用户，可以更加方便管理Linux服务器&lt;/p&gt;
+&lt;p&gt;系统默认需要以一个用户的身份登入，而且在系统上启动进程也需要以一个用户身份器运行，用户可以限制某些进程对特定资源的权限控制&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7下Python3安装</title>
+    <link href="http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/"/>
+    <id>http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:41:46.178Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Linux下Python3源码安装&quot;&gt;&lt;a href=&quot;#Linux下Python3源码安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx防盗链配置</title>
+    <link href="http://yoursite.com/2019/12/30/nginx-fang-dao-lian-pei-zhi/"/>
+    <id>http://yoursite.com/2019/12/30/nginx-fang-dao-lian-pei-zhi/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-13T07:48:10.745Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;Nginx防盗链配置案例配置&quot;&gt;&lt;a href=&quot;#Nginx防盗链配置案例配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="nginx" scheme="http://yoursite.com/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>typora-vue-theme主题介绍</title>
+    <link href="http://yoursite.com/2018/09/07/celery/"/>
+    <id>http://yoursite.com/2018/09/07/celery/</id>
+    <published>2018-09-07T01:25:00.000Z</published>
+    <updated>2020-01-13T07:46:14.513Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;异步邮件验证&quot;&gt;&lt;a href=&quot;#异步邮件验证&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python &amp; Django" scheme="http://yoursite.com/categories/Python-Django/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="celery" scheme="http://yoursite.com/tags/celery/"/>
+    
+  </entry>
+  
+</feed>
