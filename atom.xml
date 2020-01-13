@@ -155,6 +155,35 @@
   </entry>
   
   <entry>
+    <title>Centos7下Python3安装</title>
+    <link href="http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/"/>
+    <id>http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:41:46.178Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Linux下Python3源码安装&quot;&gt;&lt;a href=&quot;#Linux下Python3源码安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux常用命令</title>
     <link href="http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/"/>
     <id>http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/</id>
@@ -213,35 +242,6 @@
   </entry>
   
   <entry>
-    <title>Centos7下Python3安装</title>
-    <link href="http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/"/>
-    <id>http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:41:46.178Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Linux下Python3源码安装&quot;&gt;&lt;a href=&quot;#Linux下Python3源码安装&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Nginx防盗链配置</title>
     <link href="http://yoursite.com/2019/12/30/nginx-fang-dao-lian-pei-zhi/"/>
     <id>http://yoursite.com/2019/12/30/nginx-fang-dao-lian-pei-zhi/</id>
@@ -294,9 +294,9 @@
       <category term="Python &amp; Django" scheme="http://yoursite.com/categories/Python-Django/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="celery" scheme="http://yoursite.com/tags/celery/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
