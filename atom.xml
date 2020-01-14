@@ -127,63 +127,6 @@
   </entry>
   
   <entry>
-    <title>Linux四剑客</title>
-    <link href="http://yoursite.com/2019/12/30/linux-si-jian-ke/"/>
-    <id>http://yoursite.com/2019/12/30/linux-si-jian-ke/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:44:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;[toc]&lt;/p&gt;
-&lt;h2 id=&quot;Find&quot;&gt;&lt;a href=&quot;#Find&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos7下Python3安装</title>
-    <link href="http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/"/>
-    <id>http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:41:46.178Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Linux下Python3源码安装&quot;&gt;&lt;a href=&quot;#Linux下Python3源码安装&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linux常用命令</title>
     <link href="http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/"/>
     <id>http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/</id>
@@ -198,6 +141,34 @@
         
           &lt;p&gt;[toc]&lt;/p&gt;
 &lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux四剑客</title>
+    <link href="http://yoursite.com/2019/12/30/linux-si-jian-ke/"/>
+    <id>http://yoursite.com/2019/12/30/linux-si-jian-ke/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:44:18.741Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;Find&quot;&gt;&lt;a href=&quot;#Find&quot; class=&quot;headerlink&quot;
         
       
     
@@ -272,6 +243,35 @@
   </entry>
   
   <entry>
+    <title>Centos7下Python3安装</title>
+    <link href="http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/"/>
+    <id>http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:41:46.178Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Linux下Python3源码安装&quot;&gt;&lt;a href=&quot;#Linux下Python3源码安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>typora-vue-theme主题介绍</title>
     <link href="http://yoursite.com/2018/09/07/celery/"/>
     <id>http://yoursite.com/2018/09/07/celery/</id>
@@ -294,9 +294,9 @@
       <category term="Python &amp; Django" scheme="http://yoursite.com/categories/Python-Django/"/>
     
     
-      <category term="celery" scheme="http://yoursite.com/tags/celery/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="celery" scheme="http://yoursite.com/tags/celery/"/>
     
   </entry>
   
