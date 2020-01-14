@@ -68,35 +68,6 @@
   </entry>
   
   <entry>
-    <title>Centos下MongoDB部署</title>
-    <link href="http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/"/>
-    <id>http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:48:19.583Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;源码安装&quot;&gt;&lt;a href=&quot;#源码安装&quot; class=&quot;headerlink&quot; title=&quot;源码安装&quot;&gt;&lt;/a&gt;源码安装&lt;/h3&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos7下Django安装</title>
     <link href="http://yoursite.com/2019/12/30/linux-django-an-zhuang/"/>
     <id>http://yoursite.com/2019/12/30/linux-django-an-zhuang/</id>
@@ -127,11 +98,11 @@
   </entry>
   
   <entry>
-    <title>Linux常用命令</title>
-    <link href="http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/"/>
-    <id>http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/</id>
+    <title>Centos下MongoDB部署</title>
+    <link href="http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/"/>
+    <id>http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/</id>
     <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:45:10.183Z</updated>
+    <updated>2020-01-03T12:48:19.583Z</updated>
     
     <summary type="html">
     
@@ -139,8 +110,7 @@
       
         
         
-          &lt;p&gt;[toc]&lt;/p&gt;
-&lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot;
+          &lt;h3 id=&quot;源码安装&quot;&gt;&lt;a href=&quot;#源码安装&quot; class=&quot;headerlink&quot; title=&quot;源码安装&quot;&gt;&lt;/a&gt;源码安装&lt;/h3&gt;&lt;p&gt;&lt;a
         
       
     
@@ -149,6 +119,8 @@
     
       <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
@@ -169,6 +141,34 @@
         
           &lt;p&gt;[toc]&lt;/p&gt;
 &lt;h2 id=&quot;Find&quot;&gt;&lt;a href=&quot;#Find&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/"/>
+    <id>http://yoursite.com/2019/12/30/linux-chang-yong-ming-ling/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:45:10.183Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot;
         
       
     
