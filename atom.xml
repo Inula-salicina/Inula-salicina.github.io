@@ -3,7 +3,7 @@
   <title>Amusing&#39;s blog</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://inula.gitee.io/blog/"/>
   <updated>2020-01-12T12:13:27.625Z</updated>
@@ -68,11 +68,11 @@
   </entry>
   
   <entry>
-    <title>Centos7下Django安装</title>
-    <link href="http://inula.gitee.io/blog/2019/12/30/linux-django-an-zhuang/"/>
-    <id>http://inula.gitee.io/blog/2019/12/30/linux-django-an-zhuang/</id>
+    <title>Centos下MongoDB部署</title>
+    <link href="http://inula.gitee.io/blog/2019/12/30/centos-xia-mongodb-bu-shu/"/>
+    <id>http://inula.gitee.io/blog/2019/12/30/centos-xia-mongodb-bu-shu/</id>
     <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:46:28.885Z</updated>
+    <updated>2020-01-03T12:48:19.583Z</updated>
     
     <summary type="html">
     
@@ -80,8 +80,7 @@
       
         
         
-          &lt;h3 id=&quot;linux-django&quot;&gt;&lt;a href=&quot;#linux-django&quot; class=&quot;headerlink&quot; title=&quot;linux django&quot;&gt;&lt;/a&gt;linux django&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;安装django
-1、pip3
+          &lt;h3 id=&quot;源码安装&quot;&gt;&lt;a href=&quot;#源码安装&quot; class=&quot;headerlink&quot; title=&quot;源码安装&quot;&gt;&lt;/a&gt;源码安装&lt;/h3&gt;&lt;p&gt;&lt;a
         
       
     
@@ -91,9 +90,9 @@
       <category term="Linux" scheme="http://inula.gitee.io/blog/categories/Linux/"/>
     
     
-      <category term="linux" scheme="http://inula.gitee.io/blog/tags/linux/"/>
+      <category term="python" scheme="http://inula.gitee.io/blog/tags/python/"/>
     
-      <category term="django" scheme="http://inula.gitee.io/blog/tags/django/"/>
+      <category term="linux" scheme="http://inula.gitee.io/blog/tags/linux/"/>
     
   </entry>
   
@@ -120,35 +119,6 @@
     
       <category term="Linux" scheme="http://inula.gitee.io/blog/categories/Linux/"/>
     
-    
-      <category term="linux" scheme="http://inula.gitee.io/blog/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos下MongoDB部署</title>
-    <link href="http://inula.gitee.io/blog/2019/12/30/centos-xia-mongodb-bu-shu/"/>
-    <id>http://inula.gitee.io/blog/2019/12/30/centos-xia-mongodb-bu-shu/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:48:19.583Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;源码安装&quot;&gt;&lt;a href=&quot;#源码安装&quot; class=&quot;headerlink&quot; title=&quot;源码安装&quot;&gt;&lt;/a&gt;源码安装&lt;/h3&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://inula.gitee.io/blog/categories/Linux/"/>
-    
-    
-      <category term="python" scheme="http://inula.gitee.io/blog/tags/python/"/>
     
       <category term="linux" scheme="http://inula.gitee.io/blog/tags/linux/"/>
     
@@ -183,36 +153,6 @@
   </entry>
   
   <entry>
-    <title>Nginx防盗链配置</title>
-    <link href="http://inula.gitee.io/blog/2019/12/30/nginx-fang-dao-lian-pei-zhi/"/>
-    <id>http://inula.gitee.io/blog/2019/12/30/nginx-fang-dao-lian-pei-zhi/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-13T07:48:10.745Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;[toc]&lt;/p&gt;
-&lt;h2 id=&quot;Nginx防盗链配置案例配置&quot;&gt;&lt;a href=&quot;#Nginx防盗链配置案例配置&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://inula.gitee.io/blog/categories/Linux/"/>
-    
-    
-      <category term="linux" scheme="http://inula.gitee.io/blog/tags/linux/"/>
-    
-      <category term="nginx" scheme="http://inula.gitee.io/blog/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linux用户组及权限管理</title>
     <link href="http://inula.gitee.io/blog/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/"/>
     <id>http://inula.gitee.io/blog/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/</id>
@@ -239,6 +179,66 @@
     
     
       <category term="linux" scheme="http://inula.gitee.io/blog/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7下Django安装</title>
+    <link href="http://inula.gitee.io/blog/2019/12/30/linux-django-an-zhuang/"/>
+    <id>http://inula.gitee.io/blog/2019/12/30/linux-django-an-zhuang/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:46:28.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;linux-django&quot;&gt;&lt;a href=&quot;#linux-django&quot; class=&quot;headerlink&quot; title=&quot;linux django&quot;&gt;&lt;/a&gt;linux django&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;安装django
+1、pip3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://inula.gitee.io/blog/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://inula.gitee.io/blog/tags/linux/"/>
+    
+      <category term="django" scheme="http://inula.gitee.io/blog/tags/django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx防盗链配置</title>
+    <link href="http://inula.gitee.io/blog/2019/12/30/nginx-fang-dao-lian-pei-zhi/"/>
+    <id>http://inula.gitee.io/blog/2019/12/30/nginx-fang-dao-lian-pei-zhi/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-13T07:48:10.745Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;Nginx防盗链配置案例配置&quot;&gt;&lt;a href=&quot;#Nginx防盗链配置案例配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://inula.gitee.io/blog/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://inula.gitee.io/blog/tags/linux/"/>
+    
+      <category term="nginx" scheme="http://inula.gitee.io/blog/tags/nginx/"/>
     
   </entry>
   
