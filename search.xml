@@ -17,33 +17,6 @@
     
     
     <entry>
-      <title>Centos7下Django安装</title>
-      <link href="/2019/12/30/linux-django-an-zhuang/"/>
-      <url>/2019/12/30/linux-django-an-zhuang/</url>
-      
-        <content type="html"><![CDATA[<h3 id="linux-django"><a href="#linux-django" class="headerlink" title="linux django"></a>linux django</h3><pre><code>安装django1、pip3 install django 2、django-admin startproject mypro 报错：bash: django-admin: command not found...解决：python3 /usr/local/python3/lib/python3.7/site-packages/django/bin/django-admin.py startproject mypro3、cd mypro4、python manage.py startapp app报错 ：找不到sqlite解决步骤：①yum -y install sqlite-devel②切换到Python-3.7.4③执行：./configure --prefix=/usr/local/python3④make⑤如果没有权限：sudo make install // 有权限：make install5、python manage.py startapp app报错：sqlite版本问题解决步骤：1、cd ~wget https://www.sqlite.org/2019/sqlite-autoconf-3270200.tar.gztar -zxvf sqlite-autoconf-3270200.tar.gzcd sqlite-autoconf-3270200./configure --prefix=/usr/localmake make install2、find /usr/ -name sqlite3cd ~ls删除没有用的文件rm -rf sqlite-autoconf-3270200.tar.gzrm -rf sqlite-autoconf-3270200更改旧的sqlite3mv /usr/bin/sqlite3  /usr/bin/sqlite3_old软链接将新的sqlite3设置到/usr/bin目录下ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3将路径传递给共享库export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;查看sqlite3有没有更新成功：python3import sqlite3sqlite3.sqlite_version     3.27.1启动djangocd mypropython3 manage.py runserver</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> django </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Docker&amp;部署</title>
       <link href="/2019/12/30/docker-bu-shu/"/>
       <url>/2019/12/30/docker-bu-shu/</url>
@@ -85,9 +58,36 @@
       
         <tags>
             
+            <tag> python </tag>
+            
             <tag> linux </tag>
             
-            <tag> python </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Centos7下Django安装</title>
+      <link href="/2019/12/30/linux-django-an-zhuang/"/>
+      <url>/2019/12/30/linux-django-an-zhuang/</url>
+      
+        <content type="html"><![CDATA[<h3 id="linux-django"><a href="#linux-django" class="headerlink" title="linux django"></a>linux django</h3><pre><code>安装django1、pip3 install django 2、django-admin startproject mypro 报错：bash: django-admin: command not found...解决：python3 /usr/local/python3/lib/python3.7/site-packages/django/bin/django-admin.py startproject mypro3、cd mypro4、python manage.py startapp app报错 ：找不到sqlite解决步骤：①yum -y install sqlite-devel②切换到Python-3.7.4③执行：./configure --prefix=/usr/local/python3④make⑤如果没有权限：sudo make install // 有权限：make install5、python manage.py startapp app报错：sqlite版本问题解决步骤：1、cd ~wget https://www.sqlite.org/2019/sqlite-autoconf-3270200.tar.gztar -zxvf sqlite-autoconf-3270200.tar.gzcd sqlite-autoconf-3270200./configure --prefix=/usr/localmake make install2、find /usr/ -name sqlite3cd ~ls删除没有用的文件rm -rf sqlite-autoconf-3270200.tar.gzrm -rf sqlite-autoconf-3270200更改旧的sqlite3mv /usr/bin/sqlite3  /usr/bin/sqlite3_old软链接将新的sqlite3设置到/usr/bin目录下ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3将路径传递给共享库export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;查看sqlite3有没有更新成功：python3import sqlite3sqlite3.sqlite_version     3.27.1启动djangocd mypropython3 manage.py runserver</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> django </tag>
             
         </tags>
       
@@ -173,6 +173,33 @@
     
     
     <entry>
+      <title>Centos7下Python3安装</title>
+      <link href="/2019/12/30/python3-yuan-ma-an-zhuang/"/>
+      <url>/2019/12/30/python3-yuan-ma-an-zhuang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Linux下Python3源码安装"><a href="#Linux下Python3源码安装" class="headerlink" title="Linux下Python3源码安装"></a>Linux下Python3源码安装</h2><pre><code>1.下载wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz2.解压tar -xzvf Python-3.7.4.tgz3.configmkdir -p /usr/local/python3./configure --prefix=/usr/local/python3/4.make  编译5.make install  安装6.创建快捷方式ln -s /usr/local/python3/bin/python3 /usr/bin/python3ln -s /usr/local/python3/bin/pip3 /usr/bin/pip37.更新pip3pip3 install --upgrade pip8.环境变量中添加/usr/local/python3vi .bash_profile修改PATH=$PATH:$HOME/bin:/usr/local/python3/bin退出编辑，激活配置：source .bash_profile1.11.2.常见错误错误：ModuleNotFoundError: No module named &#39;_ctypes&#39;解决办法：yum install libffi-devel错误：zipimport.ZipImportError: can‘t decompress data; zlib not availabl解决办法：yum install zlib-devel错误：No module named &#39;_ssl&#39;解决办法：yum install openssl-devel，然后重新编译安装错误：No module named &#39;_sqlite3解决办法：yum install sqlite-devel，然后重新编译安装错误：ImportError: No module named Tkinter解决办法：yum install tkinter yum -y install tcl-devel tk-devel重新编译安装</code></pre><h2 id="并行与并发"><a href="#并行与并发" class="headerlink" title="并行与并发"></a>并行与并发</h2><p>三个理发师，3个顾客</p><p>一个理发师 ，3个顾客</p><h2 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h2><pre><code>asyncio   await   #协程  两段程序相互协作</code></pre><p>//*[@id=”content”]/h1/span[1]</p><p>//*[@id=”content”]/h1/span[1]</p><h2 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h2><p>同步</p><pre><code>---A----B-----C---  # 同步</code></pre><p>异步</p><pre><code>---A-- --B--    --C--</code></pre><p>异步刷新技术</p><h2 id="Python-如何实现异步编程"><a href="#Python-如何实现异步编程" class="headerlink" title="Python 如何实现异步编程"></a>Python 如何实现异步编程</h2><p>方法一：</p><p>多个任务放到一个队列</p><p>开多个线程同时从队列中取任务，做任务  # 异步</p><p>1个线程从队列中取任务，做任务   # </p><p>迅雷开5个线程同时下载  # 异步</p><p>方法二：</p><p>多进程</p><p>方法三：</p><p>携程</p><p>分布式：多台电脑处理任务，并行</p><p>django  +   (gunicore   uwsgi)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux用户组及权限管理</title>
       <link href="/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/"/>
       <url>/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/</url>
@@ -190,33 +217,6 @@
         <tags>
             
             <tag> linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Centos7下Python3安装</title>
-      <link href="/2019/12/30/python3-yuan-ma-an-zhuang/"/>
-      <url>/2019/12/30/python3-yuan-ma-an-zhuang/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Linux下Python3源码安装"><a href="#Linux下Python3源码安装" class="headerlink" title="Linux下Python3源码安装"></a>Linux下Python3源码安装</h2><pre><code>1.下载wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz2.解压tar -xzvf Python-3.7.4.tgz3.configmkdir -p /usr/local/python3./configure --prefix=/usr/local/python3/4.make  编译5.make install  安装6.创建快捷方式ln -s /usr/local/python3/bin/python3 /usr/bin/python3ln -s /usr/local/python3/bin/pip3 /usr/bin/pip37.更新pip3pip3 install --upgrade pip8.环境变量中添加/usr/local/python3vi .bash_profile修改PATH=$PATH:$HOME/bin:/usr/local/python3/bin退出编辑，激活配置：source .bash_profile1.11.2.常见错误错误：ModuleNotFoundError: No module named &#39;_ctypes&#39;解决办法：yum install libffi-devel错误：zipimport.ZipImportError: can‘t decompress data; zlib not availabl解决办法：yum install zlib-devel错误：No module named &#39;_ssl&#39;解决办法：yum install openssl-devel，然后重新编译安装错误：No module named &#39;_sqlite3解决办法：yum install sqlite-devel，然后重新编译安装错误：ImportError: No module named Tkinter解决办法：yum install tkinter yum -y install tcl-devel tk-devel重新编译安装</code></pre><h2 id="并行与并发"><a href="#并行与并发" class="headerlink" title="并行与并发"></a>并行与并发</h2><p>三个理发师，3个顾客</p><p>一个理发师 ，3个顾客</p><h2 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h2><pre><code>asyncio   await   #协程  两段程序相互协作</code></pre><p>//*[@id=”content”]/h1/span[1]</p><p>//*[@id=”content”]/h1/span[1]</p><h2 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h2><p>同步</p><pre><code>---A----B-----C---  # 同步</code></pre><p>异步</p><pre><code>---A-- --B--    --C--</code></pre><p>异步刷新技术</p><h2 id="Python-如何实现异步编程"><a href="#Python-如何实现异步编程" class="headerlink" title="Python 如何实现异步编程"></a>Python 如何实现异步编程</h2><p>方法一：</p><p>多个任务放到一个队列</p><p>开多个线程同时从队列中取任务，做任务  # 异步</p><p>1个线程从队列中取任务，做任务   # </p><p>迅雷开5个线程同时下载  # 异步</p><p>方法二：</p><p>多进程</p><p>方法三：</p><p>携程</p><p>分布式：多台电脑处理任务，并行</p><p>django  +   (gunicore   uwsgi)</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> python </tag>
             
         </tags>
       

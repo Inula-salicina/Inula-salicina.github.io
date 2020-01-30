@@ -41,36 +41,6 @@
   </entry>
   
   <entry>
-    <title>Centos7下Django安装</title>
-    <link href="http://yoursite.com/2019/12/30/linux-django-an-zhuang/"/>
-    <id>http://yoursite.com/2019/12/30/linux-django-an-zhuang/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:46:28.885Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;linux-django&quot;&gt;&lt;a href=&quot;#linux-django&quot; class=&quot;headerlink&quot; title=&quot;linux django&quot;&gt;&lt;/a&gt;linux django&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;安装django
-1、pip3
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-      <category term="django" scheme="http://yoursite.com/tags/django/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Docker&amp;部署</title>
     <link href="http://yoursite.com/2019/12/30/docker-bu-shu/"/>
     <id>http://yoursite.com/2019/12/30/docker-bu-shu/</id>
@@ -120,9 +90,39 @@
       <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
     
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+  </entry>
+  
+  <entry>
+    <title>Centos7下Django安装</title>
+    <link href="http://yoursite.com/2019/12/30/linux-django-an-zhuang/"/>
+    <id>http://yoursite.com/2019/12/30/linux-django-an-zhuang/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:46:28.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;linux-django&quot;&gt;&lt;a href=&quot;#linux-django&quot; class=&quot;headerlink&quot; title=&quot;linux django&quot;&gt;&lt;/a&gt;linux django&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;安装django
+1、pip3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
     
   </entry>
   
@@ -213,6 +213,35 @@
   </entry>
   
   <entry>
+    <title>Centos7下Python3安装</title>
+    <link href="http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/"/>
+    <id>http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:41:46.178Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Linux下Python3源码安装&quot;&gt;&lt;a href=&quot;#Linux下Python3源码安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux用户组及权限管理</title>
     <link href="http://yoursite.com/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/"/>
     <id>http://yoursite.com/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/</id>
@@ -239,35 +268,6 @@
     
     
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos7下Python3安装</title>
-    <link href="http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/"/>
-    <id>http://yoursite.com/2019/12/30/python3-yuan-ma-an-zhuang/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:41:46.178Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Linux下Python3源码安装&quot;&gt;&lt;a href=&quot;#Linux下Python3源码安装&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
