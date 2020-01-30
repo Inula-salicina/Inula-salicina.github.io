@@ -42,33 +42,6 @@
     
     
     <entry>
-      <title>Centos7下Django安装</title>
-      <link href="/myblog/2019/12/30/linux-django-an-zhuang/"/>
-      <url>/myblog/2019/12/30/linux-django-an-zhuang/</url>
-      
-        <content type="html"><![CDATA[<h3 id="linux-django"><a href="#linux-django" class="headerlink" title="linux django"></a>linux django</h3><pre><code>安装django1、pip3 install django 2、django-admin startproject mypro 报错：bash: django-admin: command not found...解决：python3 /usr/local/python3/lib/python3.7/site-packages/django/bin/django-admin.py startproject mypro3、cd mypro4、python manage.py startapp app报错 ：找不到sqlite解决步骤：①yum -y install sqlite-devel②切换到Python-3.7.4③执行：./configure --prefix=/usr/local/python3④make⑤如果没有权限：sudo make install // 有权限：make install5、python manage.py startapp app报错：sqlite版本问题解决步骤：1、cd ~wget https://www.sqlite.org/2019/sqlite-autoconf-3270200.tar.gztar -zxvf sqlite-autoconf-3270200.tar.gzcd sqlite-autoconf-3270200./configure --prefix=/usr/localmake make install2、find /usr/ -name sqlite3cd ~ls删除没有用的文件rm -rf sqlite-autoconf-3270200.tar.gzrm -rf sqlite-autoconf-3270200更改旧的sqlite3mv /usr/bin/sqlite3  /usr/bin/sqlite3_old软链接将新的sqlite3设置到/usr/bin目录下ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3将路径传递给共享库export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;查看sqlite3有没有更新成功：python3import sqlite3sqlite3.sqlite_version     3.27.1启动djangocd mypropython3 manage.py runserver</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> django </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Linux常用命令</title>
       <link href="/myblog/2019/12/30/linux-chang-yong-ming-ling/"/>
       <url>/myblog/2019/12/30/linux-chang-yong-ming-ling/</url>
@@ -113,6 +86,33 @@
             <tag> python </tag>
             
             <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Centos7下Django安装</title>
+      <link href="/myblog/2019/12/30/linux-django-an-zhuang/"/>
+      <url>/myblog/2019/12/30/linux-django-an-zhuang/</url>
+      
+        <content type="html"><![CDATA[<h3 id="linux-django"><a href="#linux-django" class="headerlink" title="linux django"></a>linux django</h3><pre><code>安装django1、pip3 install django 2、django-admin startproject mypro 报错：bash: django-admin: command not found...解决：python3 /usr/local/python3/lib/python3.7/site-packages/django/bin/django-admin.py startproject mypro3、cd mypro4、python manage.py startapp app报错 ：找不到sqlite解决步骤：①yum -y install sqlite-devel②切换到Python-3.7.4③执行：./configure --prefix=/usr/local/python3④make⑤如果没有权限：sudo make install // 有权限：make install5、python manage.py startapp app报错：sqlite版本问题解决步骤：1、cd ~wget https://www.sqlite.org/2019/sqlite-autoconf-3270200.tar.gztar -zxvf sqlite-autoconf-3270200.tar.gzcd sqlite-autoconf-3270200./configure --prefix=/usr/localmake make install2、find /usr/ -name sqlite3cd ~ls删除没有用的文件rm -rf sqlite-autoconf-3270200.tar.gzrm -rf sqlite-autoconf-3270200更改旧的sqlite3mv /usr/bin/sqlite3  /usr/bin/sqlite3_old软链接将新的sqlite3设置到/usr/bin目录下ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3将路径传递给共享库export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;查看sqlite3有没有更新成功：python3import sqlite3sqlite3.sqlite_version     3.27.1启动djangocd mypropython3 manage.py runserver</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> django </tag>
             
         </tags>
       
@@ -171,33 +171,6 @@
     
     
     <entry>
-      <title>Nginx防盗链配置</title>
-      <link href="/myblog/2019/12/30/nginx-fang-dao-lian-pei-zhi/"/>
-      <url>/myblog/2019/12/30/nginx-fang-dao-lian-pei-zhi/</url>
-      
-        <content type="html"><![CDATA[<p>[toc]</p><h2 id="Nginx防盗链配置案例配置"><a href="#Nginx防盗链配置案例配置" class="headerlink" title="Nginx防盗链配置案例配置"></a>Nginx防盗链配置案例配置</h2><p>防盗链的含义是网站内容本身不在自己公司的服务器上，而通过技术手段，直接在调用其他公司的服务器网站数据，而向最终用户提供此内容。</p><p>一些小网站盗链高访问量网站的音乐、图片、软件的链接，然后放置在自己的网站中，通过这种方法盗取高访问量网站的空间和流量。</p><p>网站每天访问量很大，而且占用了很多不必要的带宽，浪费资源，所以必须采取一些限制措施。</p><p>防盗链其实就是采用服务器端编程技术，通过URL过滤、主机名等实现的防止盗链的软件。</p><p>例如<a href="http://www.jfedu.net/linux/页面，如果没有配置防盗链，别人就能轻而易举的在其的网站上引用该页面。" target="_blank" rel="noopener">http://www.jfedu.net/linux/页面，如果没有配置防盗链，别人就能轻而易举的在其的网站上引用该页面。</a></p><h3 id="Nginx防盗链配置代码如下："><a href="#Nginx防盗链配置代码如下：" class="headerlink" title="Nginx防盗链配置代码如下："></a>Nginx防盗链配置代码如下：</h3><pre><code>server {        listen       80；        server_name  jfedu.net www.jfedu.net；        location / {            root   html/b；            index  index.html index.htm；        }        location ~* \.(gif|jpg|png|swf|flv)$ {                valid_referers none blocked  jfedu.net  *.jfedu.net；                root   html/b；            if ($invalid_referer) {                    #rewrite ^/ http://www.jfedu.net/403.html；                    return 403；                }        }}</code></pre><h3 id="Nginx防盗链参数详解："><a href="#Nginx防盗链参数详解：" class="headerlink" title="Nginx防盗链参数详解："></a>Nginx防盗链参数详解：</h3><ul><li><p><strong>valid_referers表示可用的referers设置</strong></p></li><li><p><strong>none 表示没有referers，直接通过浏览器或者其他工具访问。</strong></p></li><li><p><strong>blocked表示有referers，但是被代理服务器或者防火墙隐藏；</strong></p></li><li><p><strong>jfedu.net 表示通过jfedu.net访问的referers；</strong></p></li><li><p><strong>*.jfedu.net 表示通过*.jfedu.net访问的referers</strong></p></li><li><p><strong>*表示任意host主机。</strong></p></li></ul><h3 id="除了以上方法，按照如下方法设置也可以实现防盗链："><a href="#除了以上方法，按照如下方法设置也可以实现防盗链：" class="headerlink" title="除了以上方法，按照如下方法设置也可以实现防盗链："></a>除了以上方法，按照如下方法设置也可以实现防盗链：</h3><pre><code>location ~* \.(gif|jpg|png|swf|flv)$if ($host !=’*.jfedu.net’) {    return 403；}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> nginx </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Centos7下Python3安装</title>
       <link href="/myblog/2019/12/30/python3-yuan-ma-an-zhuang/"/>
       <url>/myblog/2019/12/30/python3-yuan-ma-an-zhuang/</url>
@@ -217,6 +190,33 @@
             <tag> python </tag>
             
             <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Nginx防盗链配置</title>
+      <link href="/myblog/2019/12/30/nginx-fang-dao-lian-pei-zhi/"/>
+      <url>/myblog/2019/12/30/nginx-fang-dao-lian-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h2 id="Nginx防盗链配置案例配置"><a href="#Nginx防盗链配置案例配置" class="headerlink" title="Nginx防盗链配置案例配置"></a>Nginx防盗链配置案例配置</h2><p>防盗链的含义是网站内容本身不在自己公司的服务器上，而通过技术手段，直接在调用其他公司的服务器网站数据，而向最终用户提供此内容。</p><p>一些小网站盗链高访问量网站的音乐、图片、软件的链接，然后放置在自己的网站中，通过这种方法盗取高访问量网站的空间和流量。</p><p>网站每天访问量很大，而且占用了很多不必要的带宽，浪费资源，所以必须采取一些限制措施。</p><p>防盗链其实就是采用服务器端编程技术，通过URL过滤、主机名等实现的防止盗链的软件。</p><p>例如<a href="http://www.jfedu.net/linux/页面，如果没有配置防盗链，别人就能轻而易举的在其的网站上引用该页面。" target="_blank" rel="noopener">http://www.jfedu.net/linux/页面，如果没有配置防盗链，别人就能轻而易举的在其的网站上引用该页面。</a></p><h3 id="Nginx防盗链配置代码如下："><a href="#Nginx防盗链配置代码如下：" class="headerlink" title="Nginx防盗链配置代码如下："></a>Nginx防盗链配置代码如下：</h3><pre><code>server {        listen       80；        server_name  jfedu.net www.jfedu.net；        location / {            root   html/b；            index  index.html index.htm；        }        location ~* \.(gif|jpg|png|swf|flv)$ {                valid_referers none blocked  jfedu.net  *.jfedu.net；                root   html/b；            if ($invalid_referer) {                    #rewrite ^/ http://www.jfedu.net/403.html；                    return 403；                }        }}</code></pre><h3 id="Nginx防盗链参数详解："><a href="#Nginx防盗链参数详解：" class="headerlink" title="Nginx防盗链参数详解："></a>Nginx防盗链参数详解：</h3><ul><li><p><strong>valid_referers表示可用的referers设置</strong></p></li><li><p><strong>none 表示没有referers，直接通过浏览器或者其他工具访问。</strong></p></li><li><p><strong>blocked表示有referers，但是被代理服务器或者防火墙隐藏；</strong></p></li><li><p><strong>jfedu.net 表示通过jfedu.net访问的referers；</strong></p></li><li><p><strong>*.jfedu.net 表示通过*.jfedu.net访问的referers</strong></p></li><li><p><strong>*表示任意host主机。</strong></p></li></ul><h3 id="除了以上方法，按照如下方法设置也可以实现防盗链："><a href="#除了以上方法，按照如下方法设置也可以实现防盗链：" class="headerlink" title="除了以上方法，按照如下方法设置也可以实现防盗链："></a>除了以上方法，按照如下方法设置也可以实现防盗链：</h3><pre><code>location ~* \.(gif|jpg|png|swf|flv)$if ($host !=’*.jfedu.net’) {    return 403；}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> nginx </tag>
             
         </tags>
       
