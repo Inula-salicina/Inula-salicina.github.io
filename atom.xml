@@ -3,7 +3,7 @@
   <title>Amusing&#39;s blog</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/myblog/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
   <updated>2020-01-12T12:13:27.625Z</updated>
@@ -68,35 +68,6 @@
   </entry>
   
   <entry>
-    <title>Centos下MongoDB部署</title>
-    <link href="http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/"/>
-    <id>http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:48:19.583Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;源码安装&quot;&gt;&lt;a href=&quot;#源码安装&quot; class=&quot;headerlink&quot; title=&quot;源码安装&quot;&gt;&lt;/a&gt;源码安装&lt;/h3&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos7下Django安装</title>
     <link href="http://yoursite.com/2019/12/30/linux-django-an-zhuang/"/>
     <id>http://yoursite.com/2019/12/30/linux-django-an-zhuang/</id>
@@ -155,6 +126,35 @@
   </entry>
   
   <entry>
+    <title>Centos下MongoDB部署</title>
+    <link href="http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/"/>
+    <id>http://yoursite.com/2019/12/30/centos-xia-mongodb-bu-shu/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:48:19.583Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;源码安装&quot;&gt;&lt;a href=&quot;#源码安装&quot; class=&quot;headerlink&quot; title=&quot;源码安装&quot;&gt;&lt;/a&gt;源码安装&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux四剑客</title>
     <link href="http://yoursite.com/2019/12/30/linux-si-jian-ke/"/>
     <id>http://yoursite.com/2019/12/30/linux-si-jian-ke/</id>
@@ -169,6 +169,36 @@
         
           &lt;p&gt;[toc]&lt;/p&gt;
 &lt;h2 id=&quot;Find&quot;&gt;&lt;a href=&quot;#Find&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux用户组及权限管理</title>
+    <link href="http://yoursite.com/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/"/>
+    <id>http://yoursite.com/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:43:10.076Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Linux是一个多用户的操作系统，引入用户，可以更加方便管理Linux服务器&lt;/p&gt;
+&lt;p&gt;系统默认需要以一个用户的身份登入，而且在系统上启动进程也需要以一个用户身份器运行，用户可以限制某些进程对特定资源的权限控制&lt;/p&gt;
         
       
     
@@ -236,36 +266,6 @@
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux用户组及权限管理</title>
-    <link href="http://yoursite.com/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/"/>
-    <id>http://yoursite.com/2019/12/30/linux-yong-hu-zu-ji-quan-xian-guan-li/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:43:10.076Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;[toc]&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Linux是一个多用户的操作系统，引入用户，可以更加方便管理Linux服务器&lt;/p&gt;
-&lt;p&gt;系统默认需要以一个用户的身份登入，而且在系统上启动进程也需要以一个用户身份器运行，用户可以限制某些进程对特定资源的权限控制&lt;/p&gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
     
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
