@@ -41,33 +41,6 @@
   </entry>
   
   <entry>
-    <title>Docker&amp;部署</title>
-    <link href="http://yoursite.com/2019/12/30/docker-bu-shu/"/>
-    <id>http://yoursite.com/2019/12/30/docker-bu-shu/</id>
-    <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-12T12:14:37.666Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-engine---community&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos7下Django安装</title>
     <link href="http://yoursite.com/2019/12/30/linux-django-an-zhuang/"/>
     <id>http://yoursite.com/2019/12/30/linux-django-an-zhuang/</id>
@@ -98,11 +71,11 @@
   </entry>
   
   <entry>
-    <title>Linux四剑客</title>
-    <link href="http://yoursite.com/2019/12/30/linux-si-jian-ke/"/>
-    <id>http://yoursite.com/2019/12/30/linux-si-jian-ke/</id>
+    <title>Docker&amp;部署</title>
+    <link href="http://yoursite.com/2019/12/30/docker-bu-shu/"/>
+    <id>http://yoursite.com/2019/12/30/docker-bu-shu/</id>
     <published>2019-12-30T09:30:37.000Z</published>
-    <updated>2020-01-03T12:44:18.741Z</updated>
+    <updated>2020-01-12T12:14:37.666Z</updated>
     
     <summary type="html">
     
@@ -110,8 +83,7 @@
       
         
         
-          &lt;p&gt;[toc]&lt;/p&gt;
-&lt;h2 id=&quot;Find&quot;&gt;&lt;a href=&quot;#Find&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/centos/#install-docker-engine---community&quot; target=&quot;_blank&quot;
         
       
     
@@ -121,7 +93,7 @@
       <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
     
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -148,9 +120,9 @@
       <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -169,6 +141,34 @@
         
           &lt;p&gt;[toc]&lt;/p&gt;
 &lt;h2 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux四剑客</title>
+    <link href="http://yoursite.com/2019/12/30/linux-si-jian-ke/"/>
+    <id>http://yoursite.com/2019/12/30/linux-si-jian-ke/</id>
+    <published>2019-12-30T09:30:37.000Z</published>
+    <updated>2020-01-03T12:44:18.741Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;Find&quot;&gt;&lt;a href=&quot;#Find&quot; class=&quot;headerlink&quot;
         
       
     
@@ -265,9 +265,9 @@
       <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -294,9 +294,9 @@
       <category term="Python &amp; Django" scheme="http://yoursite.com/categories/Python-Django/"/>
     
     
-      <category term="celery" scheme="http://yoursite.com/tags/celery/"/>
-    
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="celery" scheme="http://yoursite.com/tags/celery/"/>
     
   </entry>
   
